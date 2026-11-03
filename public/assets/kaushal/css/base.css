@@ -1,0 +1,34 @@
+/* KAUSHAL AGRO: SHARED STYLES. Include this file ONCE on landing.blade.php.
+   Do not repeat these colours, typography or helpers in future sections. */
+:root {
+  --ka-green: #183d2c;
+  --ka-green-deep: #102e21;
+  --ka-green-muted: #657c5c;
+  --ka-gold: #b58e3e;
+  --ka-cream: #fcfaf5;
+  --ka-white: #ffffff;
+  --ka-ink: #18382a;
+  --ka-muted: #5e635e;
+  --ka-border: #ece6db;
+  --ka-font-body: 'DM Sans', Arial, sans-serif;
+  --ka-font-heading: 'Playfair Display', Georgia, serif;
+  --ka-content: 1260px;
+  --ka-radius: 16px;
+}
+
+.ka-site,
+.ka-site *,
+.ka-site *::before,
+.ka-site *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body.ka-site { margin: 0; color: var(--ka-ink); background: var(--ka-cream); font-family: var(--ka-font-body); -webkit-font-smoothing: antialiased; }
+.ka-site a { color: inherit; text-decoration: none; }
+.ka-site button { font: inherit; cursor: pointer; }
+.ka-site img { max-width: 100%; height: auto; display: block; }
+.ka-site h1, .ka-site h2, .ka-site h3, .ka-site p { margin-top: 0; }
+.ka-site :is(a, button, input, textarea):focus-visible { outline: 3px solid var(--ka-gold); outline-offset: 4px; }
+.ka-container { width: min(var(--ka-content), calc(100% - 88px)); margin-inline: auto; }
+.ka-heading { font-family: var(--ka-font-heading); font-weight: 600; letter-spacing: -0.035em; }
+.ka-section { padding: 60px 0px ;}
+@media (max-width: 700px) { .ka-container { width: calc(100% - 34px); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

@@ -1,0 +1,100 @@
+/* The Farm Project - 10-Step Process. New scoped CSS: other sections unchanged. */
+.fp-flow {
+  background: #fffdf1;
+  padding: 60px 0 60px;
+  color: #181a14;
+  isolation: isolate;
+}
+.fp-flow, .fp-flow * { box-sizing: border-box; }
+.fp-flow__container { width: min(1420px, calc(100% - 64px)); margin: 0 auto; }
+.fp-flow__header { text-align: center; margin: 0 auto 38px; max-width: 930px; }
+.fp-flow__eyebrow {
+  display: flex; align-items: center; justify-content: center; gap: 17px;
+  color: #365b28; font: 800 12px/1.4 var(--body, 'DM Sans', Arial, sans-serif);
+  letter-spacing: .15em; margin: 0 0 12px;
+}
+.fp-flow__eyebrow::before, .fp-flow__eyebrow::after {
+  content: ''; display: inline-block; width: 74px; height: 1px; background: #aabb8f;
+}
+.fp-flow__title {
+  margin: 0 0 12px; color: #101d14;
+  font: 850 clamp(34px, 4vw, 56px)/1.12 var(--heading, 'Outfit', Arial, sans-serif);
+  letter-spacing: -.045em;
+}
+.fp-flow__intro {
+  margin: 0 auto; color: #626458; font: 400 16px/1.6 var(--body, 'DM Sans', Arial, sans-serif);
+  max-width: 720px;
+}
+.fp-flow__grid {
+  /* display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); */
+  display:flex;
+  overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;
+  
+  gap: 32px; list-style: none; margin: 0; padding:  0 0 20px 0;
+}
+.fp-flow__card {
+  min-width: 240px; position: relative; border: 1px solid #e4e2cd;
+  border-radius: 22px; padding: 24px 15px 19px;
+  background: #fffef8; box-shadow: 0 8px 22px rgba(38, 49, 25, .06);
+}
+.fp-flow__number {
+  position: absolute; z-index: 2; left: 10px; top: 9px;
+  width: 50px; height: 50px; border-radius: 50%;
+  display: grid; place-items: center; background: #FFDF00; color: #171d13;
+  font: 800 23px/1 var(--heading, 'Outfit', Arial, sans-serif);
+}
+.container {
+    overflow-x: auto;
+}
+
+.fp-flow__photo {
+  display: block; width: 100%; height: auto; aspect-ratio: 1.27; object-fit: cover;
+  border-radius: 10px; background: #ecf0e7; margin: 0 0 15px;
+}
+.fp-flow__step-title {
+  margin: 0 0 8px; font: 800 clamp(16px, 1.3vw, 20px)/1.22 var(--heading, 'Outfit', Arial, sans-serif);
+  letter-spacing: -.025em; color: #102019;
+}
+.fp-flow__step-desc {
+  margin: 0; color: #55584f;
+  font: 400 14px/1.55 var(--body, 'DM Sans', Arial, sans-serif);
+}
+/* Arrows only point horizontally between cards in each visible row. */
+.fp-flow__card:not(:nth-child(5n))::after {
+  content: '➜'; position: absolute; top: 37%; right: -27px; z-index: 3;
+  transform: translateY(-50%); color: #285636; font: 700 27px/1 Arial, sans-serif;
+}
+.fp-flow__note {
+  margin: 24px auto 0; text-align: center; color: #717467;
+  font: 400 12px/1.5 var(--body, Arial, sans-serif);
+}
+@media (max-width: 1199px) {
+  .fp-flow__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .fp-flow__card:not(:nth-child(5n))::after { content: none; }
+  .fp-flow__card:not(:nth-child(3n))::after { content: '➜'; position: absolute; top: 37%; right: -27px; z-index: 3; transform: translateY(-50%); color: #285636; font: 700 27px/1 Arial, sans-serif; }
+}
+@media (max-width: 760px) {
+  .fp-flow { padding: 62px 0 70px; }
+  .fp-flow__container { width: min(650px, calc(100% - 36px)); }
+  .fp-flow__header { margin-bottom: 30px; }
+  .fp-flow__title { font-size: clamp(31px, 6vw, 45px); }
+  .fp-flow__intro { font-size: 14px; }
+  .fp-flow__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 20px; }
+  .fp-flow__card { padding: 21px 12px 16px; }
+  .fp-flow__card::after, .fp-flow__card:not(:nth-child(3n))::after { content: none; }
+  .fp-flow__card:nth-child(odd)::after { content: '➜'; position: absolute; top: 37%; right: -19px; z-index: 3; transform: translateY(-50%); color: #285636; font: 700 19px/1 Arial, sans-serif; }
+  .fp-flow__number { width: 40px; height: 40px; font-size: 19px; }
+  .fp-flow__step-title { font-size: 16px; }
+  .fp-flow__step-desc { font-size: 12px; }
+}
+@media (max-width: 460px) {
+  .fp-flow__grid { grid-template-columns: 1fr; gap: 30px; }
+  .fp-flow__card { padding: 24px 16px 19px; }
+  .fp-flow__photo { max-height: 235px; }
+  .fp-flow__card:nth-child(odd)::after, .fp-flow__card:not(:nth-child(3n))::after { content: none; }
+  /* .fp-flow__card:not(:last-child)::after {
+    content: '➜'; right: auto; left: 50%; top: auto; bottom: -28px;
+    transform: translateX(-50%); font: 800 21px/1 Arial, sans-serif; color: #285636;
+  } */
+  .fp-flow__step-desc { font-size: 14px; }
+}

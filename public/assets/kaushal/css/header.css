@@ -1,0 +1,161 @@
+/* SECTION 01 — Kaushal Agro Header (replace your old header.css entirely)
+   Colours, font families and container width come from base.css. */
+
+.ka-skip-link {
+  position: fixed; left: 16px; top: -80px; z-index: 300;
+  padding: 10px 16px; background: var(--ka-white); color: var(--ka-green);
+  border: 1px solid var(--ka-gold); border-radius: 8px;
+}
+.ka-skip-link:focus { top: 12px; }
+
+/* Slim top information bar */
+.ka-topbar { background: var(--ka-green); color: #f8f7f0; }
+.ka-topbar__inner {
+  min-height: 35px; display: flex; align-items: center;
+  justify-content: space-between; gap: 18px;
+}
+.ka-topbar p { margin: 0; font-size: 11px; font-weight: 500; line-height: 1.5; }
+.ka-topbar__left { display: inline-flex; gap: 12px; align-items: center; min-width: 0; }
+.ka-topbar__left svg {
+  flex: 0 0 14px; width: 14px; height: 14px;
+  stroke: #dfc47a; stroke-width: 1.8; fill: none;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ka-topbar__divider { width: 1px; height: 13px; background: #a7b9aa; opacity: .75; }
+.ka-topbar__right span { color: #e4c479; padding: 0 9px; }
+
+/* Elegant, clean navigation bar */
+.ka-header {
+  position: relative; z-index: 60;
+  background: rgba(255,255,253,.99);
+  border-bottom: 1px solid var(--ka-border);
+}
+.ka-header__inner {
+  min-height: 85px; display: flex; align-items: center;
+  justify-content: space-between; gap: 32px;
+}
+.ka-brand {
+  display: inline-flex; align-items: center; gap: 13px;
+  flex: 0 0 auto; min-width: 0;
+}
+.ka-brand__logo {
+  width: 49px; height: 49px; flex: 0 0 49px;
+  display: block; object-fit: contain;
+}
+.ka-brand__words { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.ka-brand__words strong {
+  color: var(--ka-green); font: 600 23px/1.08 var(--ka-font-heading);
+  letter-spacing: -.035em; white-space: nowrap;
+}
+.ka-brand__words small {
+  color: #696b61; font: 700 8px/1.35 var(--ka-font-body);
+  letter-spacing: .13em; white-space: nowrap;
+}
+.ka-brand:hover .ka-brand__words strong { color: var(--ka-green-deep); }
+
+/* Desktop menu */
+.ka-nav { display: flex; align-items: center; gap: clamp(18px,2.4vw,34px); }
+.ka-nav__link {
+  position: relative; display: inline-flex; align-items: center;
+  min-height: 85px; color: #35453b;
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+  transition: color .2s ease;
+}
+.ka-nav__link:hover,.ka-nav__link--current { color: var(--ka-green); }
+.ka-nav__link--current::after {
+  content: ''; position: absolute; left: 0; right: 0;
+  bottom: 23px; height: 2px; background: var(--ka-gold);
+}
+.ka-nav__cta {
+  display: inline-flex; justify-content: center; align-items: center; gap: 18px;
+  min-height: 43px; padding: 12px 22px;
+  background: var(--ka-green); border-radius: 7px; color: #fff !important;
+  font-size: 12px; line-height: 1.2; font-weight: 700; white-space: nowrap;
+  transition: background .2s ease, transform .2s ease;
+}
+.ka-nav__cta:hover { background: var(--ka-green-deep); transform: translateY(-2px); }
+.ka-nav__cta span { font-size: 17px; line-height: 1; }
+
+/* Font Awesome menu icon (mobile only). The same button shows bars or X. */
+.ka-header .ka-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--ka-border);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ka-green);
+  cursor: pointer;
+  line-height: 1;
+}
+.ka-header .ka-menu-toggle:hover { background: var(--ka-cream); }
+.ka-header .ka-menu-toggle .ka-menu-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+.ka-header .ka-menu-toggle .ka-menu-icon--close { display: none; }
+.ka-header .ka-menu-toggle[aria-expanded="true"] .ka-menu-icon--bars { display: none; }
+.ka-header .ka-menu-toggle[aria-expanded="true"] .ka-menu-icon--close { display: inline-block; }
+
+/* MOBILE & TABLET: only these rules control mobile menu visibility.
+   Never add a second inline <style> block inside header.blade.php. */
+@media (max-width: 1100px) {
+  .ka-header__inner { gap: 18px; }
+  .ka-nav { gap: 18px; }
+  .ka-brand__words strong { font-size: 21px; }
+}
+@media (max-width: 900px) {
+  .ka-header__inner { min-height: 75px; }
+  .ka-header .ka-menu-toggle { display: inline-flex !important; margin-left: auto; flex-shrink: 0; position: relative; z-index: 92; }
+  .ka-header .ka-nav {
+    display: none !important;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    z-index: 90;
+    margin: 0;
+    padding: 15px 24px 24px;
+    border-top: 1px solid var(--ka-border);
+    border-bottom: 1px solid var(--ka-border);
+    background: var(--ka-white);
+    box-shadow: 0 18px 30px #0d2c1b17;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: min(75vh, 550px);
+    overflow-y: auto;
+  }
+  .ka-header .ka-nav.is-open { display: flex !important; }
+  .ka-nav__link {
+    display: flex;
+    min-height: 48px;
+    padding: 12px 5px;
+    border-bottom: 1px solid var(--ka-border);
+    font-size: 14px;
+  }
+  .ka-nav__link--current::after { display: none; }
+  .ka-nav__cta { margin-top: 17px; padding: 15px 20px; }
+}
+@media (max-width: 600px) {
+  .ka-topbar__inner { min-height: 30px; }
+  .ka-topbar p { font-size: 10px; }
+  .ka-topbar__right { display: none; }
+  .ka-topbar__left { gap: 7px; }
+  .ka-brand { gap: 7px; }
+  .ka-brand__logo { width: 38px; height: 38px; flex-basis: 38px; }
+  .ka-brand__words strong { font-size: 18px; }
+  .ka-brand__words small { font-size: 7px; letter-spacing: .09em; }
+  .ka-header__inner { min-height: 70px; }
+}
+@media (max-width: 375px) {
+  .ka-brand__logo { width: 33px; height: 33px; flex-basis: 33px; }
+  .ka-brand__words strong { font-size: 16px; }
+  .ka-brand__words small { font-size: 6px; }
+  .ka-topbar__left { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ka-menu-icon, .ka-nav__link, .ka-nav__cta { transition: none; }
+}
