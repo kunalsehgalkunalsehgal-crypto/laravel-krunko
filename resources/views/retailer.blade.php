@@ -316,6 +316,91 @@
       </div>
     </section>
 
+<!-- OUR CLIENTS -->
+<section class="fp-clients-section section-space" id="our-clients">
+    <div class="container">
+        {{-- <div class="fp-new-section-head">
+            <p class="section-kicker">OUR CLIENTS</p>
+            <h2>Our Trusted <em>Partners.</em></h2>
+            <p>Building strong business relationships.</p>
+        </div> --}}
+  <div class="section-head kr-products-heading">
+      <div>
+        <p class="section-kicker">OUR CLIENTS</p>
+        <h2 id="kr-products-heading">Our Trusted <em>Partners.</em></h2>
+        <p>Building strong business relationships.</p>
+      </div>
+      <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+    </div>
+        {{-- <div class="fp-clients-grid">
+            @for ($i = 1; $i <= 6; $i++)
+                <div class="fp-client-card">
+                    <span class="fp-client-placeholder">
+                        CLIENT LOGO
+                    </span>
+                </div>
+            @endfor
+        </div> --}}
+        
+<div class="fp-clients-grid">
+    @for ($i = 1; $i <= 6; $i++)
+        <div class="fp-client-card">
+            <img
+                src="/assets/farm-project/images/clients/client-{{ $i }}.png"
+                alt="Client {{ $i }} Logo"
+                loading="lazy"
+            >
+        </div>
+    @endfor
+</div>
+    </div>
+</section>
+
+<!-- OUR STRENGTHS -->
+@php
+    // DEMO VALUES: Replace with actual company numbers.
+    $strengths = [
+        ['number' => '10+', 'label' => 'Years of Experience', 'icon' => '✳'],
+        ['number' => '100+', 'label' => 'Team Members', 'icon' => '◎'],
+        ['number' => '20+', 'label' => 'Business Partners', 'icon' => '↗'],
+        ['number' => '500+', 'label' => 'Production Capacity (kg/day)', 'icon' => '◈'],
+    ];
+@endphp
+
+<section class="fp-strengths-section section-space" id="our-strengths">
+    <div class="container">
+        {{-- <div class="fp-new-section-head">
+            <p class="section-kicker">WHY THE FARM PROJECT</p>
+            <h2>Our <em>Strengths.</em></h2>
+            <p>The numbers behind our business.</p>
+        </div> --}}
+          <div class="section-head kr-products-heading">
+      <div>
+        <p class="section-kicker">WHY THE FARM PROJECT</p>
+        <h2 id="kr-products-heading">Our <em>Strengths.</em></em></h2>
+        <p>The numbers behind our business.</p>
+      </div>
+      <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+    </div>
+
+        <div class="fp-strengths-grid">
+            @foreach ($strengths as $item)
+                <div class="fp-strength-card">
+                    <span class="fp-strength-icon">
+                        {{ $item['icon'] }}
+                    </span>
+
+                    <h3>{{ $item['number'] }}</h3>
+
+                    <p>{{ $item['label'] }}</p>
+                </div>
+            @endforeach
+        </div>
+
+        
+    </div>
+</section>
+
     <section class="enquiry-section section-space" id="enquiry">
       <div class="container enquiry-layout">
         <aside class="enquiry-intro">

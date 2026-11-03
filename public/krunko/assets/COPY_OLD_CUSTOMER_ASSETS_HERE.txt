@@ -1,0 +1,43 @@
+CUSTOMER PAGE: COPY THESE FROM YOUR OLD KRUNKO PROJECT
+=====================================================
+
+Put each file under:
+public/krunko/
+
+Keep its original relative path.
+
+Example:
+assets/jar-cheese.jpg
+becomes:
+public/krunko/assets/jar-cheese.jpg
+
+Files referenced by your current customer page:
+assets/demo 2.webp
+assets/demo 3.webp
+assets/demo 4.webp
+assets/foot1.webp
+assets/foot2.webp
+assets/foot3.webp
+assets/foot4.webp
+assets/green-back.jpg
+assets/green-front.jpg
+assets/gud til.webp
+assets/himaliyan salt.webp
+assets/jar-cheese.jpg
+assets/jar-cheese.webp
+assets/jar-peri.jpg
+assets/jar-peri.webp
+assets/jar-salt.jpg
+assets/jar-tomato.jpg
+assets/jar-tomato.webp
+assets/kaushal-logo.png
+assets/mascot-poster.webp
+assets/pack-lifestyle.jpg
+assets/pink-back.jpg
+assets/pink-front.jpg
+video.mp4
+video2.mp4
+
+NOTE:
+The retailer images are already included in public/krunko/images/.
+The KRUNKO logo is already included in public/krunko/assets/.

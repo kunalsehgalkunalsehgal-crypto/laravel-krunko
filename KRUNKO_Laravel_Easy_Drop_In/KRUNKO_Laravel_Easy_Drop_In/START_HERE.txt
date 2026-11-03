@@ -1,0 +1,61 @@
+KRUNKO - EASY LARAVEL DROP-IN
+=============================
+
+DO THIS:
+
+1) Open this package.
+
+2) Copy the "resources" folder into your Laravel project root.
+   Merge folders when Windows asks.
+   This adds:
+   resources/views/krunko/choose.blade.php
+   resources/views/krunko/customer.blade.php
+   resources/views/krunko/retailer.blade.php
+
+3) Copy the "public" folder into your Laravel project root.
+   MERGE it. Do NOT delete/replace your current public folder.
+   This only adds:
+   public/krunko/...
+
+4) Open:
+   routes/KRUNKO_ROUTES_TO_ADD.txt
+
+   Copy those 3 routes and paste them at the bottom of your EXISTING:
+   routes/web.php
+
+   Make sure routes/web.php already has:
+   use Illuminate\Support\Facades\Route;
+
+5) Your CUSTOMER page uses old product images/videos that were not included
+   in the files you uploaded today.
+   Copy your old KRUNKO assets into:
+   public/krunko/assets/
+
+   Keep the same filenames.
+
+   See:
+   public/krunko/assets/COPY_OLD_CUSTOMER_ASSETS_HERE.txt
+
+6) Retailer images are already included:
+   public/krunko/images/hero-makhana.jpg
+   public/krunko/images/processing-machine.jpg
+   public/krunko/images/plain-makhana.jpg
+
+7) Run:
+   php artisan optimize:clear
+   php artisan serve
+
+8) Open:
+   http://127.0.0.1:8000/krunko
+
+URLS:
+ /krunko
+ /krunko/customer
+ /krunko/retailer
+
+IMPORTANT:
+- Existing public files are not replaced.
+- KRUNKO stays fully inside public/krunko/.
+- Your original CSS/JS logic is kept.
+- Only HTML paths and page links were converted for Laravel.
+- Retailer enquiry still uses the existing JS/mailto flow. No database/mail backend was added.

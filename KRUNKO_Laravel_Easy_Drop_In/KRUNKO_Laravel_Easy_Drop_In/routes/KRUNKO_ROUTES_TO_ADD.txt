@@ -1,0 +1,10 @@
+// ===== KRUNKO ROUTES: paste these into routes/web.php =====
+
+Route::view('/krunko', 'krunko.choose')
+    ->name('krunko.choose');
+
+Route::view('/krunko/customer', 'krunko.customer')
+    ->name('krunko.customer');
+
+Route::view('/krunko/retailer', 'krunko.retailer')
+    ->name('krunko.retailer');

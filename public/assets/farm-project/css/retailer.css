@@ -3543,3 +3543,160 @@ textarea:focus-visible {
     padding: 2px;
   }
 }
+
+/* OUR CLIENTS + OUR STRENGTHS */
+
+.fp-clients-section,
+.fp-strengths-section {
+    background: #FFFBF0;
+    padding: 75px 0;
+}
+
+.fp-new-section-head {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.fp-new-section-head h2 {
+    color: #171717;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 12px 0;
+}
+
+.fp-new-section-head h2 em {
+    color: #07542A;
+}
+
+.fp-new-section-head > p:last-child {
+    color: #555;
+    font-size: 16px;
+}
+
+/* OUR CLIENTS */
+
+.fp-clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.fp-client-card {
+    background: #fff;
+    border: 2px solid #191919;
+    border-radius: 18px;
+    box-shadow: 5px 5px 0 #191919;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fp-client-placeholder {
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* OUR STRENGTHS */
+
+.fp-strengths-section {
+    padding-top: 35px;
+}
+
+.fp-strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.fp-strength-card {
+    background: #FFDF00;
+    border: 2px solid #191919;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 #191919;
+    text-align: center;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 215px;
+}
+
+.fp-strength-icon {
+    color: #191919;
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.fp-strength-card h3 {
+    color: #191919;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1;
+    font-weight: 900;
+    margin: 0 0 14px;
+}
+
+.fp-strength-card p {
+    color: #191919;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.fp-demo-note {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: 22px;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .fp-strengths-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .fp-clients-section,
+    .fp-strengths-section {
+        padding: 45px 0;
+    }
+
+    .fp-clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .fp-client-card {
+        min-height: 95px;
+        padding: 12px;
+    }
+
+    .fp-strengths-grid {
+        gap: 14px;
+    }
+
+    .fp-strength-card {
+        padding: 22px 10px;
+        min-height: 175px;
+    }
+
+    .fp-strength-card p {
+        font-size: 12px;
+    }
+
+    .fp-strength-icon {
+        font-size: 26px;
+    }
+}

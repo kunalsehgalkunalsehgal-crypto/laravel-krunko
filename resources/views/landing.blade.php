@@ -171,7 +171,7 @@
                         Explore pure makhana grades, premium packs and bulk supply
                         options for your business.
                     </p>
-                    <a class="ka-products__link" href="{{ url('/retailer') }}"
+                    <a class="ka-products__link" href="{{ url('/the-farm-project') }}"
                        aria-label="Explore The Farm Project plain makhana">
                         Explore The Farm Project
                         <span aria-hidden="true">&#8594;</span>
@@ -194,7 +194,7 @@
                         Discover exciting makhana flavours and crunchy snacks
                         made for your everyday snack breaks.
                     </p>
-                    <a class="ka-products__link" href="{{ url('/retailer') }}"
+                    <a class="ka-products__link" href="{{ url('/krunko') }}"
                        aria-label="Explore KRUNKO flavoured makhana">
                         Explore KRUNKO
                         <span aria-hidden="true">&#8594;</span>

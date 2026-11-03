@@ -8,4 +8,8 @@ Route::get('/shdvchgsd', function () {
 Route::get('/', function () {
     return view('landing');
 });
-Route::view('/retailer', 'retailer')->name('retailer');
+Route::view('/the-farm-project', 'retailer')->name('retailer');
+
+Route::view('/krunko', 'krunko.customer')->name('krunko.customer');
+
+
