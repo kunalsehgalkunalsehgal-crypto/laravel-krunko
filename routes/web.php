@@ -10,6 +10,8 @@ Route::get('/', function () {
 });
 Route::view('/the-farm-project', 'retailer')->name('retailer');
 
-Route::view('/krunko', 'krunko.customer')->name('krunko.customer');
+Route::view('/krunkoo', 'krunko.customer')->name('krunko.customer');
 
+Route::view('/krunko/ourstory', 'krunko.our-story')
+    ->name('krunko.our-story');
 

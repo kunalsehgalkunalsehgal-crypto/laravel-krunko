@@ -194,7 +194,7 @@
                         Discover exciting makhana flavours and crunchy snacks
                         made for your everyday snack breaks.
                     </p>
-                    <a class="ka-products__link" href="{{ url('/krunko') }}"
+                    <a class="ka-products__link" href="{{ url('/krunkoo') }}"
                        aria-label="Explore KRUNKO flavoured makhana">
                         Explore KRUNKO
                         <span aria-hidden="true">&#8594;</span>

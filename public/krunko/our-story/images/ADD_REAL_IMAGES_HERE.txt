@@ -1,0 +1,15 @@
+OUR STORY IMAGE GUIDE
+
+Optional real photos to add here:
+public/assets/our-story/images/purnia-farm.jpg
+public/assets/our-story/images/team-factory.jpg
+public/assets/our-story/images/farm-source.jpg
+
+The page still works without these files:
+- Hero falls back to the green background.
+- Team photo blocks stay as clean design placeholders.
+
+Recommended:
+purnia-farm.jpg      1800 x 1100
+team-factory.jpg     1200 x 1400
+farm-source.jpg      900 x 700

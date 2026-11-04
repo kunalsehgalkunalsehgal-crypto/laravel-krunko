@@ -5,22 +5,25 @@ const menuButton = document.querySelector('.menu-button');
 let toastTimer;
 function showToast(message) {
   const toast = document.querySelector('.toast');
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
 }
 function toggleMenu() {
-  const isOpen = document.querySelector('.navigation').classList.toggle('open');
+  const navigation = document.querySelector('.navigation');
+  if (!navigation || !menuButton) return;
+  const isOpen = navigation.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', isOpen);
   menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 }
-menuButton.addEventListener('click', toggleMenu);
+if (menuButton) menuButton.addEventListener('click', toggleMenu);
 document.querySelectorAll('.navigation a, .navigation button').forEach(link => link.addEventListener('click', () => {
-  if (menuButton.getAttribute('aria-expanded') === 'true') toggleMenu();
+  if (menuButton?.getAttribute('aria-expanded') === 'true') toggleMenu();
 }));
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') toggleMenu();
+  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') toggleMenu();
 });
 function togglePacketImage(button) {
   const flipped = button.classList.toggle('is-flipped');
@@ -35,8 +38,10 @@ document.querySelectorAll('.packet-image').forEach(button => {
 });
 function updateCartCount() {
   const count = cart.reduce((total, item) => total + item.quantity, 0);
-  document.querySelector('#cart-count').textContent = count;
-  document.querySelector('.cart-button').setAttribute('aria-label', `Open cart, ${count} items`);
+  const countElement = document.querySelector('#cart-count');
+  const cartButton = document.querySelector('.cart-button');
+  if (countElement) countElement.textContent = count;
+  if (cartButton) cartButton.setAttribute('aria-label', `Open cart, ${count} items`);
 }
 function addToCart(name, price) {
   const item = cart.find(item => item.name === name);
@@ -47,6 +52,7 @@ function addToCart(name, price) {
 }
 document.querySelectorAll('.add-cart').forEach(button => button.addEventListener('click', () => addToCart(button.dataset.product, Number(button.dataset.price))));
 function openDialog(title, content) {
+  if (!dialog) return;
   document.querySelector('#dialog-title').textContent = title;
   document.querySelector('#dialog-content').replaceChildren();
   if (typeof content === 'string') {
@@ -69,31 +75,75 @@ function showCart() {
   const total = document.createElement('p'); total.className = 'cart-total';
   total.textContent = cart.length ? `Subtotal: ₹${cart.reduce((sum, item) => sum + item.price * item.quantity, 0)}` : 'Your cart is waiting for a little crunch.';
   const note = document.createElement('p'); note.className = 'cart-note'; note.textContent = 'Storefront preview: prices are sample values. Checkout and payments are not enabled.';
-  const shop = document.createElement('button'); shop.className = 'button'; shop.textContent = 'Continue Shopping'; shop.addEventListener('click', () => {dialog.close(); document.querySelector('#shop').scrollIntoView();});
+  const shop = document.createElement('button'); shop.className = 'button'; shop.textContent = 'Continue Shopping'; shop.addEventListener('click', () => {
+    dialog.close();
+    const shopSection = document.querySelector('#shop');
+    if (shopSection) shopSection.scrollIntoView();
+    else {
+      const customerUrl = document.querySelector('.logo')?.href?.split('#')[0];
+      if (customerUrl) window.location.href = `${customerUrl}#shop`;
+    }
+  });
   contents.append(total, note, shop); openDialog('Your Crunch Cart', contents);
 }
-document.querySelector('.cart-button').addEventListener('click', showCart);
-document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => {if (event.target === dialog) {const r = dialog.getBoundingClientRect(); if(event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();}});
-// Product search searches both the jars and packs.
-document.querySelector('.search').addEventListener('submit', event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  if (innerWidth <= 650 && !form.classList.contains('search-open')) {form.classList.add('search-open'); document.querySelector('#search').focus(); return;}
-  const query = document.querySelector('#search').value.trim().toLowerCase();
+document.querySelector('.cart-button')?.addEventListener('click', showCart);
+document.querySelector('.dialog-close')?.addEventListener('click', () => dialog?.close());
+dialog?.addEventListener('click', event => {if (event.target === dialog) {const r = dialog.getBoundingClientRect(); if(event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();}});
+// Search locally on the storefront. On other KRUNKO pages the shared form
+// submits to the customer page, where this same filter picks up the query.
+const searchForm = document.querySelector('.search');
+const searchInput = document.querySelector('#search');
+const searchResult = document.querySelector('.search-result');
+const shopSection = document.querySelector('#shop');
+const productCards = [...document.querySelectorAll('.product-card')];
+
+function filterProducts(rawQuery, scrollToResults = true) {
+  if (!searchInput || !searchResult || !shopSection || !productCards.length) return false;
+  const query = rawQuery.trim().toLowerCase();
   let count = 0;
-  document.querySelectorAll('.product-card').forEach(card => {const match = card.dataset.name.toLowerCase().includes(query); card.hidden = !match; if (match) count++;});
-  const status = document.querySelector('.search-result'); status.hidden = false;
-  status.textContent = query ? `${count} product${count === 1 ? '' : 's'} found for “${query}”. Clear the search to see all products.` : 'Showing all products.';
-  document.querySelector('#shop').scrollIntoView();
+  productCards.forEach(card => {
+    const match = card.dataset.name.toLowerCase().includes(query);
+    card.hidden = !match;
+    if (match) count++;
+  });
+  searchResult.hidden = false;
+  searchResult.textContent = query
+    ? `${count} product${count === 1 ? '' : 's'} found for “${query}”. Clear the search to see all products.`
+    : 'Showing all products.';
+  if (scrollToResults) shopSection.scrollIntoView();
+  return true;
+}
+
+searchForm?.addEventListener('submit', event => {
+  if (innerWidth <= 650 && !searchForm.classList.contains('search-open')) {
+    event.preventDefault();
+    searchForm.classList.add('search-open');
+    searchInput?.focus();
+    return;
+  }
+  if (productCards.length) {
+    event.preventDefault();
+    filterProducts(searchInput?.value || '');
+  }
 });
-document.querySelector('#search').addEventListener('input', event => {
-  if (!event.target.value) {document.querySelectorAll('.product-card').forEach(card => card.hidden = false); document.querySelector('.search-result').hidden = true;}
+
+searchInput?.addEventListener('input', event => {
+  if (!event.target.value && productCards.length) {
+    productCards.forEach(card => card.hidden = false);
+    if (searchResult) searchResult.hidden = true;
+  }
 });
+
+const initialSearch = new URLSearchParams(window.location.search).get('search');
+if (initialSearch && searchInput && productCards.length) {
+  searchInput.value = initialSearch;
+  filterProducts(initialSearch, false);
+}
 // Newsletter uses a local success state; no email is sent or stored.
-document.querySelector('#newsletter-form').addEventListener('submit', event => {
+document.querySelector('#newsletter-form')?.addEventListener('submit', event => {
   event.preventDefault();
-  document.querySelector('#newsletter-message').textContent = 'Thanks for joining the crunch! Preview only — your email has not been saved.';
+  const message = document.querySelector('#newsletter-message');
+  if (message) message.textContent = 'Thanks for joining the crunch! Preview only — your email has not been saved.';
   event.currentTarget.reset();
 });
 const info = {
@@ -110,8 +160,13 @@ const info = {
   terms: ['Storefront Preview', 'Products are presented for design review. Prices and weights are sample values. This page does not accept orders or payments. Final store terms must be supplied before launch.'],
   shipping: ['Shipping Information', 'The featured offer is free shipping on orders above ₹499. Orders cannot be placed through this preview. Delivery areas, timelines and the final shipping policy must be confirmed before launch.']
 };
-document.querySelectorAll('[data-info]').forEach(button => button.addEventListener('click', event => {event.preventDefault(); const entry = info[button.dataset.info]; openDialog(entry[0], entry[1]);}));
-document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-info]').forEach(button => button.addEventListener('click', event => {
+  event.preventDefault();
+  const entry = info[button.dataset.info];
+  if (entry) openDialog(entry[0], entry[1]);
+}));
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
 
 
 // KRUNKO Showcase — manual scrolling, mouse drag and optional decorative video.

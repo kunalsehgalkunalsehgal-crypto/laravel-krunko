@@ -7,41 +7,15 @@
     <meta name="description"
         content="Meet KRUNKO: wholesome makhana, irresistible flavours and a brighter way to snack.">
     <title>KRUNKO — Crunch Big. Snack Smart.</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('krunko/css/style.css') }}">
     <script src="{{ asset('krunko/js/script.js') }}" defer></script>
 </head>
 
 <body>
-    <div class="announcement">A little crunch. A lot of happiness. <span>Free shipping on orders above ₹499</span></div>
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav-row"><a href="#home" class="logo" aria-label="KRUNKO home"><img src="{{ asset('krunko/assets/logo.png') }}"
-                    alt="KRUNKO"></a>
-            <nav class="navigation" id="navigation" aria-label="Main navigation"><a href="#home">Home</a><a
-                    href="#shop">Shop</a><a href="#packs">Makhana</a><button data-info="combos">Combos</button><a
-                    href="#story">About Us</a><a href="#contact">Contact</a></nav>
-            <div class="header-actions">
-                <form class="search" role="search"><label class="sr-only" for="search">Search products</label><input
-                        id="search" type="search" placeholder="Find your crunch"><button aria-label="Search"><svg
-                            viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="10.5" cy="10.5" r="6.5" />
-                            <path d="m16 16 4 4" />
-                        </svg></button></form><button class="icon-button" data-info="account" aria-label="Account"><svg
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <circle cx="12" cy="8" r="4" />
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
-                    </svg></button><button class="icon-button cart-button" aria-label="Open cart"><svg
-                        viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M5 7h14l2 14H3L5 7Z" />
-                        <path d="M8 8V6a4 4 0 0 1 8 0v2" />
-                    </svg><span id="cart-count">0</span></button><button class="icon-button menu-button"
-                    aria-label="Open menu" aria-expanded="false" aria-controls="navigation"><svg viewBox="0 0 24 24"
-                        aria-hidden="true">
-                        <path d="M3 6h18M3 12h18M3 18h18" />
-                    </svg></button>
-            </div>
-        </div>
-    </header>
+    @include('krunko.partials.header')
+
     <main>
         <!-- Hero Section -->
         <section class="hero" id="home">
@@ -345,7 +319,7 @@
                     <p class="eyebrow">ALL THE CRUNCH. ALL THE GOODNESS.</p>
                     <h2>Why KRUNKO?</h2>
                 </div>
-                <div class="why-grid"><img class="why-mascot" src="{{ asset('krunko/assets/demo 2.webp') }}"
+                <div class="why-grid"><img class="why-mascot" src="{{ asset('krunko/assets/demo 2.png') }}"
                         alt="Makhana mascot holding a snack pack" loading="lazy">
                     <div class="benefits">
                         <article><span>✧</span>
@@ -384,7 +358,7 @@
                 <h2>Good Snacks.<br><em>Brighter Days.</em></h2>
                 <p>A big smile. A little mischief. And a love for all things crunchy. Our makhana buddy brings a little
                     sunshine to every snack break.</p><a class="button" href="#shop">Explore KRUNKO</a>
-            </div><img src="{{ asset('krunko/assets/demo 4.webp') }}" alt="Smiling makhana mascot waving from the farm" loading="lazy">
+            </div><img src="{{ asset('krunko/assets/demo 4.png') }}" alt="Smiling makhana mascot waving from the farm" loading="lazy">
         </section>
         <!-- Our Story -->
         <section class="story-section section container" id="story"><img class="story-photo" src="{{ asset('krunko/assets/foot1.webp') }}"
@@ -429,41 +403,7 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container footer-grid">
-            <div class="footer-brand"><a href="#home"><img src="{{ asset('krunko/assets/logo.png') }}" alt="KRUNKO"></a>
-                <p>Crunch big. Snack smart.<br>A brand by Kaushal Agro Industries.</p>
-                <div class="social-links"><button data-info="social">Instagram</button><button
-                        data-info="social">Facebook</button><button data-info="social">YouTube</button><button
-                        data-info="social">LinkedIn</button></div>
-            </div>
-            <div>
-                <h3>Shop</h3><a href="#shop">All Products</a><a href="#packs">Makhana</a><button
-                    data-info="combos">Combos</button><button data-info="arrivals">New Arrivals</button><button
-                    data-info="offers">Offers</button>
-            </div>
-            <div>
-                <h3>About</h3><a href="#story">Our Story</a><button data-info="farmers">Farmers</button><a
-                    href="#quality" data-info="quality">Quality</a><a href="#feed">Blogs & Stories</a><button
-                    data-info="contact">Contact Us</button>
-            </div>
-            <div>
-                <h3>Let’s Talk Crunch</h3><a href="mailto:info@thefarmproject.co.in">info@thefarmproject.co.in</a>
-                <p>C-41, P.C. Colony, Kankarbagh,<br>Patna, Bihar 800020, India</p>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>© <span id="year"></span> KRUNKO · Kaushal Agro Industries</p>
-            <div><button data-info="privacy">Privacy Policy</button><button data-info="terms">Terms &
-                    Conditions</button><button data-info="shipping">Shipping Policy</button></div>
-        </div>
-    </footer>
-    <div class="toast" role="status" aria-live="polite"></div>
-    <dialog id="info-dialog"><button class="dialog-close" aria-label="Close dialog">×</button>
-        <h2 id="dialog-title"></h2>
-        <div id="dialog-content"></div>
-    </dialog>
+    @include('krunko.partials.footer')
 </body>
 
 </html>
