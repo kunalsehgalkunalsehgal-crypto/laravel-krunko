@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="/assets/farm-project/css/process-flow.css">
   {{-- <script defer src="{{ asset('assets/farm-project/js/retailer.js') }}"></script> --}}
   <script defer src="/assets/farm-project/js/retailer.js"></script>
+  <script defer src="{{ asset('assets/farm-project/js/farm-enquiry-submit.js') }}"></script>
 </head>
 <body class="retailer-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -420,7 +421,12 @@
         </aside>
         <div class="form-card">
           <div class="form-card-head"><div><span class="form-caption">PRODUCT ENQUIRY</span><h3>Tell us your requirement.</h3><p>Fields marked <b>*</b> are required.</p></div><span class="form-sticker" aria-hidden="true">THE FARM PROJECT ✳</span></div>
-          <form id="retailer-enquiry-form" novalidate>
+          {{-- <form id="retailer-enquiry-form" novalidate> --}}
+            <form id="retailer-enquiry-form"
+      method="POST"
+      action="{{ route('farm.enquiry.store') }}"
+      novalidate>
+    @csrf
             <div class="form-section-caption">01. YOUR DETAILS</div>
             <div class="form-grid">
               <div class="field"><label for="fullName">Full name <b>*</b></label><input id="fullName" name="fullName" autocomplete="name" type="text" maxlength="80" placeholder="Your full name" required /></div>
