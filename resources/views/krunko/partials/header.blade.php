@@ -11,12 +11,13 @@
         </a>
 
         <nav class="navigation" id="navigation" aria-label="Main navigation">
-            <a href="{{ $krunkoCustomerUrl }}#home">Home</a>
-            <a href="{{ $krunkoCustomerUrl }}#shop">Shop</a>
+            <a href="{{ $krunkoCustomerUrl }}">Home</a>
+            <a href="{{ route('krunko.shop') }}">Shop</a>
             <a href="{{ $krunkoCustomerUrl }}#packs">Makhana</a>
-            <button type="button" data-info="combos">Combos</button>
-            <a href="{{ route('krunko.our-story') }}">About Us</a>
-            <a href="{{ $krunkoCustomerUrl }}#contact">Contact</a>
+            <a href="{{route('krunko.our-story')}}">Our Story</a>
+            <a href="{{ route('krunko.about-us') }}">About Us</a>
+            {{-- <a href="{{ $krunkoCustomerUrl }}#contact">Contact</a> --}}
+            <a href="{{ route('krunko.contact') }}">Contact</a>
         </nav>
 
         <div class="header-actions">

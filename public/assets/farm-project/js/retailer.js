@@ -365,3 +365,212 @@
   });
 
 })();
+
+
+
+/* SINGLE SET - OUR CLIENTS CAROUSEL */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".fp-single-carousel");
+    const track = document.querySelector(".fp-single-track");
+
+    if (!carousel || !track || track.children.length < 2) return;
+
+    let moving = false;
+    let timer = null;
+
+    function moveNext() {
+        if (moving) return;
+
+        const first = track.firstElementChild;
+        if (!first) return;
+
+        moving = true;
+
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const distance = first.getBoundingClientRect().width + gap;
+
+        track.style.transition = "transform 700ms ease";
+        track.style.transform = `translateX(-${distance}px)`;
+    }
+
+    track.addEventListener("transitionend", function (event) {
+        if (
+            event.target !== track ||
+            event.propertyName !== "transform"
+        ) return;
+
+        track.style.transition = "none";
+
+        // Move first logo to the end.
+        // No new logo is created.
+        track.appendChild(track.firstElementChild);
+
+        track.style.transform = "translateX(0)";
+        moving = false;
+    });
+
+    function start() {
+        if (timer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+        }
+
+        timer = setInterval(moveNext, 2500);
+    }
+
+    function stop() {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+
+    start();
+});
+
+/* ==========================================
+   OUR STRENGTHS - SCROLL NUMBER COUNTER
+========================================== */
+
+(function () {
+
+    function initStrengthCounter() {
+
+        const section = document.querySelector(
+            "#our-strengths.fp-strength-bento"
+        );
+
+        if (!section) return;
+
+        const counters = section.querySelectorAll(
+            ".fsb-card h4"
+        );
+
+        if (!counters.length) return;
+
+        let started = false;
+
+        function animateCounter(element) {
+
+            const originalText = element.textContent.trim();
+
+            // Example: "500+" becomes 500 and "+"
+            const match = originalText.match(/^([\d,]+)(.*)$/);
+
+            if (!match) return;
+
+            const target = Number(
+                match[1].replace(/,/g, "")
+            );
+
+            const suffix = match[2];
+
+            if (!Number.isFinite(target)) return;
+
+            const duration = 2000;
+            let startTime = null;
+
+            element.textContent = "0" + suffix;
+            element.setAttribute("aria-label", originalText);
+
+            function update(currentTime) {
+
+                if (startTime === null) {
+                    startTime = currentTime;
+                }
+
+                const elapsed = currentTime - startTime;
+
+                const progress = Math.min(
+                    elapsed / duration,
+                    1
+                );
+
+                // Smooth counting animation
+                const easedProgress =
+                    1 - Math.pow(1 - progress, 3);
+
+                const currentValue = Math.floor(
+                    target * easedProgress
+                );
+
+                element.textContent =
+                    currentValue.toLocaleString("en-IN") + suffix;
+
+                if (progress < 1) {
+
+                    requestAnimationFrame(update);
+
+                } else {
+
+                    element.textContent = originalText;
+
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        function startCounters() {
+
+            if (started) return;
+
+            started = true;
+
+            // Respect reduced motion setting
+            if (window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches) {
+                return;
+            }
+
+            counters.forEach(function (counter) {
+
+                animateCounter(counter);
+
+            });
+        }
+
+        // Start counting when section appears
+        if ("IntersectionObserver" in window) {
+
+            const observer = new IntersectionObserver(
+                function (entries) {
+
+                    if (entries[0].isIntersecting) {
+
+                        startCounters();
+
+                        observer.disconnect();
+                    }
+
+                },
+                {
+                    threshold: 0.2
+                }
+            );
+
+            observer.observe(section);
+
+        } else {
+
+            startCounters();
+
+        }
+    }
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initStrengthCounter
+        );
+
+    } else {
+
+        initStrengthCounter();
+
+    }
+
+})();

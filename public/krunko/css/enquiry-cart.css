@@ -1,0 +1,287 @@
+
+/* KRUNKO Enquiry Cart - Scoped CSS */
+/* Existing website design remains unchanged. */
+
+.kr-enquiry-dialog {
+    --kr-yellow: #ffdf00;
+    --kr-ink: #181a14;
+    --kr-green: #365b28;
+
+    box-sizing: border-box;
+    width: min(660px, calc(100% - 24px));
+    max-width: 660px;
+    max-height: min(90dvh, 860px);
+    padding: 30px;
+    border: 2px solid #24251e;
+    border-radius: 20px;
+    background: #fffef5;
+    color: var(--kr-ink);
+    box-shadow: 0 24px 80px #0004;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.45;
+}
+
+.kr-enquiry-dialog::backdrop {
+    background: rgba(17, 24, 15, .68);
+}
+
+.kr-enquiry-dialog * {
+    box-sizing: border-box;
+}
+
+.kr-enquiry-dialog h2 {
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.13;
+    margin: 5px 0 12px;
+    letter-spacing: -.04em;
+}
+
+.kr-enquiry-dialog h2 span {
+    color: var(--kr-green);
+}
+
+.kr-enquiry-close {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    background: none;
+    border: 0;
+    font-size: 31px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.kr-enquiry-eyebrow {
+    color: var(--kr-green);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .12em;
+    margin-bottom: 8px;
+}
+
+.kr-enquiry-subtitle,
+.kr-enquiry-footnote {
+    color: #67675d;
+    font-size: 13px;
+}
+
+.kr-enquiry-subtitle {
+    margin: 0 0 20px;
+}
+
+/* Cart products */
+
+.kr-enquiry-row {
+    padding: 14px 0;
+    border-bottom: 1px solid #e4e1d5;
+}
+
+.kr-enquiry-product-name {
+    font-weight: 800;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.kr-enquiry-row-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.kr-enquiry-qty {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.kr-enquiry-qty strong {
+    min-width: 20px;
+    text-align: center;
+}
+
+.kr-qty-button {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background: var(--kr-yellow);
+    border: 1px solid #24251e;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.kr-qty-button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.kr-remove-button {
+    background: transparent;
+    border: 0;
+    text-decoration: underline;
+    color: #87422e;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.kr-enquiry-total {
+    margin: 17px 0 23px;
+    padding: 13px 15px;
+    background: #ffef95;
+    border-radius: 9px;
+    font-weight: 900;
+}
+
+.kr-enquiry-empty {
+    padding: 24px 12px;
+    text-align: center;
+    background: #faf8ed;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* Success and error messages */
+
+#kr-enquiry-message {
+    background: #f0f9e7;
+    padding: 13px;
+    border-left: 4px solid var(--kr-green);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    overflow-wrap: anywhere;
+}
+
+#kr-enquiry-message.is-error {
+    background: #fff0ec;
+    border-color: #a0322a;
+}
+
+/* Customer enquiry form */
+
+.kr-enquiry-dialog form h3 {
+    font-size: 20px;
+    margin: 0 0 16px;
+}
+
+.kr-enquiry-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.kr-enquiry-dialog form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #202219;
+}
+
+.kr-enquiry-dialog input:not([type=checkbox]),
+.kr-enquiry-dialog textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    background: #fff;
+    border: 1px solid #d3d4c7;
+    border-radius: 8px;
+    margin-top: 6px;
+    color: #181a14;
+    font: inherit;
+    font-size: 15px;
+}
+
+.kr-enquiry-dialog input:focus-visible,
+.kr-enquiry-dialog textarea:focus-visible {
+    outline: 2px solid var(--kr-green);
+    outline-offset: 2px;
+}
+
+.kr-enquiry-full {
+    margin-top: 13px;
+}
+
+.kr-enquiry-dialog .kr-enquiry-consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin: 19px 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.kr-enquiry-consent input {
+    accent-color: var(--kr-green);
+    flex-shrink: 0;
+    margin: 4px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+/* Submit button */
+
+.kr-enquiry-submit {
+    width: 100%;
+    background: var(--kr-ink);
+    color: #fff;
+    padding: 14px 17px;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.kr-enquiry-submit:hover {
+    background: var(--kr-green);
+}
+
+.kr-enquiry-submit:disabled {
+    opacity: .55;
+    cursor: wait;
+}
+
+.kr-enquiry-footnote {
+    text-align: center;
+    margin: 10px 0 16px;
+}
+
+.kr-enquiry-continue {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #c5c8bb;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+/* Hidden spam protection field */
+
+.kr-enquiry-bot {
+    position: absolute !important;
+    left: -10000px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 560px) {
+    .kr-enquiry-dialog {
+        padding: 24px 17px;
+    }
+
+    .kr-enquiry-form-grid {
+        grid-template-columns: 1fr;
+    }
+}

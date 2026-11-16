@@ -3700,3 +3700,180 @@ textarea:focus-visible {
         font-size: 26px;
     }
 }
+
+/* OUR CLIENTS - SINGLE CAROUSEL */
+
+.fp-single-carousel {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 30px auto 0;
+    padding: 15px 0;
+}
+
+.fp-single-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    align-items: center;
+    transform: translateX(0);
+}
+
+.fp-single-card {
+    flex: 0 0 190px;
+    width: 190px;
+    height: 125px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff;
+    border: 1px solid #e9e9e0;
+    border-radius: 16px;
+}
+
+.fp-single-card img {
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 85px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .fp-single-track {
+        gap: 14px;
+    }
+
+    .fp-single-card {
+        flex-basis: 145px;
+        width: 145px;
+        height: 100px;
+        padding: 14px;
+    }
+}
+
+
+/* ENQUIRY BENEFITS - FONT AWESOME ICONS */
+
+.enquiry-section .enquiry-benefit-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffea8c;
+    border: 1px solid #d6b832;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.enquiry-section .enquiry-benefit-icon i {
+    font-size: 19px !important;
+    color: #1a2416;
+    line-height: 1;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .enquiry-section .enquiry-benefit-icon {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+    }
+
+    .enquiry-section .enquiry-benefit-icon i {
+        font-size: 17px !important;
+    }
+}
+/* THE FARM PROJECT - portrait video inside existing hero image area */
+.fp-hero-video-showcase { align-items: center; padding: 24px 0; }
+/* .fp-hero-video-showcase .fp-hero-video-shell {
+  width: min(100%, 550px); aspect-ratio: 4 / 3;
+  border: 2px solid #181a14; border-radius: 30px;
+  background: #315037; padding: 9px; isolation: isolate;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 10px 10px 0 #ffdf00, 0 20px 40px #152b1930;
+} */
+ .fp-hero-video-showcase .fp-hero-video-shell {
+    /* width: min(100%, 550px); */
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: 500px;
+    border: 2px solid #181a14;
+    border-radius: 30px;
+    background: #315037;
+    padding: 9px;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 0 #ffdf00, 0 20px 40px #152b1930;
+    /* object-fit: none; */
+}
+.fp-hero-video-shell::before {
+  content: ""; position: absolute; inset: 9px; z-index: 0;
+  background: url('../videos/mascot-video-poster.webp') center / cover;
+  filter: blur(18px) brightness(.58); transform: scale(1.08);
+}
+.fp-hero-video-shell .fp-hero-mascot-video {
+position: relative;
+    z-index: 1;
+    display: block;
+    height: 75%;
+    width: auto;
+    max-width: 98%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 22px #0003;
+    background: #d7d9be;
+}
+/* .fp-hero-video-shell .fp-hero-mascot-video {
+  position: relative; z-index: 1; display: block; height: 100%; width: auto;
+  max-width: 100%; object-fit: contain; border-radius: 15px;
+  box-shadow: 0 4px 22px #0003; background: #d7d9be;
+} */
+.fp-hero-video-tag {
+  position: absolute; z-index: 2; bottom: 20px; left: 20px;
+  font: 800 11px/1.3 'Outfit', Arial, sans-serif; letter-spacing: .08em;
+  padding: 10px 14px; border-radius: 999px; background: #ffdf00; color: #181a14;
+}
+@media (max-width: 900px) {
+  .fp-hero-video-showcase { min-height: 0; padding: 0 12px 40px; }
+  .fp-hero-video-showcase .fp-hero-video-shell { width: min(100%, 520px); aspect-ratio: 4 / 3; }
+}
+@media (max-width: 540px) {
+  .fp-hero-video-showcase .fp-hero-video-shell {
+    width: min(100%, 375px); aspect-ratio: 4 / 5; border-radius: 24px;
+  }
+  .fp-hero-video-tag { left: 15px; bottom: 15px; font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) { .fp-hero-video-shell video { animation: none; } }
+.fp-hero-video-shell {
+    aspect-ratio: 4 / 3;
+}
+
+.fp-hero-mascot-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.fp-hero-video-shell {
+    aspect-ratio: 16 / 9 !important;
+}
+
+.fp-hero-mascot-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

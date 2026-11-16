@@ -154,7 +154,7 @@ const info = {
   story: ['Rooted in Goodness', 'KRUNKO is a brand by Kaushal Agro Industries. Our passion is bringing the goodness of makhana to everyday snack breaks, with flavours that make every handful a little more fun.'],
   farmers: ['From Farm to Crunch', 'Makhana starts its journey in lotus ponds. KRUNKO celebrates this humble ingredient through a range of delicious snack flavours.'],
   quality: ['Goodness in Every Handful', 'See the back of the supplied green and pink pack images for product information. Check the packaging for ingredients, allergens and nutritional details before consuming.'],
-  contact: ['Let’s Talk Crunch', 'Contact Kaushal Agro Industries at info@thefarmproject.co.in. Address: C-41, P.C. Colony, Kankarbagh, Patna, Bihar 800020, India.'],
+  contact: ['Let’s Talk Crunch', 'Contact Kaushal Agro Industries at info@thefarmproject.co.in. Address: Kaushal Agro Industries Pvt Ltd, Plug n Play Shed B1, Gate No. 3, Industrial Growth Centre Maranga, Purnia, Bihar - 854303, India.'],
   social: ['Keep It KRUNKO', 'Official social profile links have not been supplied yet. For brand enquiries, contact info@thefarmproject.co.in.'],
   privacy: ['Privacy Notice', 'This static preview does not send your email, cart or search information to a server. Cart selections last only while this page is open. A live-store privacy policy must be supplied before launch.'],
   terms: ['Storefront Preview', 'Products are presented for design review. Prices and weights are sample values. This page does not accept orders or payments. Final store terms must be supplied before launch.'],

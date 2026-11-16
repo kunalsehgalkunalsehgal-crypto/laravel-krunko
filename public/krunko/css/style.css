@@ -76,7 +76,7 @@ h2 {
     margin-bottom: 16px;
 }
 h2 > span {
-    color: #95ad42;
+    color:#365b28;
 }
 h3 {
     font-size: 1.35rem;
@@ -443,27 +443,42 @@ svg {
 .product-bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 8px;
 }
 .product-bottom strong {
     font-size: 1.25rem;
 }
 .add-cart {
-    background: var(--yellow);
+       background: var(--yellow);
     border: 0;
+    display: flex;
     border-radius: 6px;
     padding: 9px 12px;
     font-size: 0.78rem;
     font-weight: 800;
     white-space: nowrap;
+    transition: all 0.2s, color 0.2s;
+    align-items: center;
+    height: 43px;
 }
 .add-cart span {
     font-size: 1.1rem;
     margin-left: 10px;
 }
 .add-cart:hover {
-    background: #f0cc00;
+    background: #365b28;
+    color: white;
+transition: all 0.2s, color 0.2s;
+ }/*
+.add-cart:hover a{
+    background: #365b28;
+    color: white;
+transition: all 0.2s, color 0.2s;
+} */
+ .add-cart:hover a {
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 .sample-note {
     font-size: 0.75rem;

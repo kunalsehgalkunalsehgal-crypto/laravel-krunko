@@ -1,569 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The story behind Kaushal Agro Industries and KRUNKO, rooted in Bihar and built around makhana.">
-    <title>Our Story | KRUNKO</title>
-    <link rel="stylesheet" href="{{ asset('krunko/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('krunko/our-story/css/our-story.css') }}">
-    <script src="{{ asset('krunko/js/script.js') }}" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Meet KRUNKO: wholesome makhana, irresistible flavours and a brighter way to snack.">
+        
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="stylesheet" href="/assets/krunko/css/enquiry-cart.css">
+
+    <title>KRUNKO — Crunch Big. Snack Smart.</title>
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('krunko/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('krunko/css/enquiry-cart.css') }}">
+    <script src="{{ asset('krunko/js/script.js') }}" defer></script>
 </head>
+
 <body>
+    @include('krunko.partials.header')
 
-@include('krunko.partials.header')
+    <main>
+        
 
-<main>
-<section class="ks-story-hero" aria-labelledby="ks-story-hero-title">
-    <div class="ks-story-container ks-story-hero__inner">
+<style>
+/* =========================================
+   KRUNKO - KAUSHAL GROUP LEGACY SECTION
+   Completely independent design
+========================================= */
 
-        <div class="ks-story-hero__content">
+.krlegacy-new {
+    --kl-green: #365b28;
+    --kl-dark: #152d16;
+    --kl-yellow: #ffdf00;
+    --kl-cream: #fff9eb;
 
-            <p class="ks-story-eyebrow">
-                OUR STORY · ROOTED IN BIHAR
-            </p>
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+    padding: 95px 20px 90px;
+    background: var(--kl-cream);
+    color: var(--kl-dark);
+    font-family: "Outfit", Arial, sans-serif;
+}
 
-            <h1 id="ks-story-hero-title">
-                From the heart of
-                Bihar, to every
-                <span>happy crunch.</span>
-            </h1>
+.krlegacy-new *,
+.krlegacy-new *::before,
+.krlegacy-new *::after {
+    box-sizing: border-box;
+}
 
-            <p class="ks-story-hero__description">
-                Our journey began with a simple idea:
-                to bring the goodness of Bihar's makhana
-                to more people, with care, quality
-                and great taste.
-            </p>
+/* BACKGROUND CORNER SHAPES */
 
-            <a href="#journey" class="ks-story-hero__button">
-                Read Our Journey
-                <span>→</span>
-            </a>
+.krlegacy-new::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -145px;
+    left: -140px;
+    width: 300px;
+    height: 300px;
+    background: var(--kl-yellow);
+    border-radius: 37% 63% 60% 40%;
+    transform: rotate(25deg);
+}
 
-        </div>
+.krlegacy-new::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -120px;
+    bottom: -170px;
+    width: 300px;
+    height: 270px;
+    background: var(--kl-green);
+    border-radius: 60% 40% 55% 45%;
+    transform: rotate(-15deg);
+}
 
-        <div class="ks-story-hero__visual">
-            <img
-                src="{{ asset('krunko/our-story/images/hero-mascot-story.png') }}"
-                alt="KRUNKO mascot and Purnia Bihar makhana"
-            >
-        </div>
+.krlegacy-new .kl-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    </div>
-</section>
+/* =========================================
+   SECTION HEADING
+========================================= */
 
-<div class="ks-story-benefits">
-    <div class="ks-story-container ks-story-benefits__inner">
+.krlegacy-new .kl-header {
+    text-align: center;
+    margin-bottom: 65px;
+}
 
-        <div class="ks-story-benefit">
-            <span>✦</span> 100% Vegetarian
-        </div>
+.krlegacy-new .kl-eyebrow {
+    display: inline-block;
+    padding: 13px 30px;
+    margin-bottom: 25px;
+    background: var(--kl-yellow);
+    color: var(--kl-dark);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+    text-transform: uppercase;
 
-        <div class="ks-story-benefit">
-            <span>✓</span> FSSAI Certified
-        </div>
+    border-radius: 45% 12% 30% 12% /
+                   15% 25% 15% 30%;
 
-        <div class="ks-story-benefit">
-            <span>⌖</span> Made in India
-        </div>
+    transform: rotate(-1deg);
+}
 
-        <div class="ks-story-benefit">
-            <span>✿</span> Quality Ingredients
-        </div>
+.krlegacy-new .kl-title {
+    margin: 0;
+    color: var(--kl-dark);
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: clamp(42px, 7vw, 86px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
 
-    </div>
-</div>
-    {{-- <section class="story-hero">
-        <div class="story-hero-bg"
-             style="background-image:
-             linear-gradient(90deg, rgba(25,43,28,.94) 0%, rgba(25,43,28,.82) 43%, rgba(25,43,28,.18) 100%),
-             url('{{ asset('krunko/assets/mascot-farm.jpg') }}');">
-        </div>
+.krlegacy-new .kl-title span {
+    color: var(--kl-green);
+}
 
-        <div class="story-container hero-inner">
-            <div class="hero-copy">
-                <p class="eyebrow">OUR STORY · ROOTED IN BIHAR</p>
-                <h1>From the heart of Bihar,<br><span>to every happy crunch.</span></h1>
-                <p>
-                    Our story begins with makhana, a simple ingredient deeply connected with the land,
-                    people and food culture of Bihar. Kaushal Agro brings that journey forward with care,
-                    consistency and a new generation of products.
-                </p>
+.krlegacy-new .kl-yellow-stroke {
+    display: block;
+    width: 200px;
+    max-width: 45%;
+    height: 10px;
+    margin: 15px auto 26px;
+    background: var(--kl-yellow);
+    border-radius: 80% 20% 65% 35%;
+    transform: rotate(-3deg);
+}
 
-                <div class="hero-actions">
-                    <a href="#journey" class="btn btn-yellow">Read our journey <span>↓</span></a>
-                    <a href="{{ route('krunko.customer') }}" class="text-link">Meet KRUNKO <span>↗</span></a>
-                </div>
-            </div>
+.krlegacy-new .kl-subtitle {
+    margin: 0;
+    color: var(--kl-green);
+    font-size: clamp(21px, 3vw, 34px);
+    font-weight: 800;
+    line-height: 1.25;
+}
 
-            <aside class="hero-note">
-                <span class="note-kicker">FROM OUR ROOTS</span>
-                <strong>MAKHANA</strong>
-                <p>A traditional ingredient. A modern journey.</p>
-                <div class="note-line"></div>
-                <small>Purnia · Bihar · India</small>
-            </aside>
-        </div>
-    </section> --}}
-{{-- KRUNKO OUR STORY | SECTION 02: OUR ROOTS + FARM TO FAMILY --}}
-{{-- No header/footer. Add this partial inside the existing Our Story page. --}}
-<section id="journey" class="kr-roots-section" aria-labelledby="kr-roots-heading">
-    <div class="kr-rp-container">
-        <div class="kr-roots-grid">
-            <div class="kr-roots-content">
-                <p class="kr-rp-eyebrow">OUR ROOTS</p>
-                <h2 id="kr-roots-heading">A story that starts <span>close to the source.</span></h2>
-                <p class="kr-roots-description">
-                    Kaushal Agro Industries was built on a simple thought: to work with
-                    Bihar's rich makhana heritage and create products that people can
-                    trust and enjoy every day.
-                </p>
+/* =========================================
+   IMAGE + CONTENT GRID
+========================================= */
 
-                <div class="kr-roots-values">
-                    <article class="kr-root-card">
-                        <span class="kr-root-card-icon" aria-hidden="true">
-                            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M28 39C18 32 21 20 28 12c7 8 10 20 0 27Z" fill="#ffdf00"/>
-                                <path d="M27 40C15 40 9 33 9 23c10 0 19 5 19 17ZM29 40c12 0 18-7 18-17-10 0-19 5-19 17Z"/>
-                                <path d="M15 45c7-2 19-2 26 0M28 39v7"/>
-                            </svg>
-                            {{-- <i class="fa-solid fa-spa"></i> --}}
+.krlegacy-new .kl-story-grid {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    gap: 55px;
+    align-items: center;
+    margin-bottom: 65px;
+}
 
-                        </span>
-                        <h3>Rooted in<br>Bihar</h3>
-                    </article>
-                    <article class="kr-root-card">
-                        <span class="kr-root-card-icon" aria-hidden="true">
-                            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M28 41C20 36 20 22 28 13c8 9 8 23 0 28Z" fill="#ffe300"/>
-                                <path d="M28 41C15 41 9 31 10 23c10 1 18 9 18 18ZM28 41c13 0 19-10 18-18-10 1-18 9-18 18Z"/>
-                                <path d="M16 44c6-3 18-3 24 0"/>
-                            </svg>
-                            {{-- <i class="fa-solid fa-spa"></i> --}}
+/* LEFT SIDE - YOUR IMAGE */
 
-                        </span>
-                        <h3>Focused on<br>Makhana</h3>
-                    </article>
-                    <article class="kr-root-card">
-                        <span class="kr-root-card-icon" aria-hidden="true">
-                            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="28" cy="15" r="7" fill="#ffdf00"/>
-                                <circle cx="14" cy="23" r="6"/>
-                                <circle cx="42" cy="23" r="6"/>
-                                <path d="M17 42v-6c0-7 5-12 11-12s11 5 11 12v6H17Z" fill="#ffdf00"/>
-                                <path d="M8 42v-5c0-5 3-8 8-9M48 42v-5c0-5-3-8-8-9"/>
-                            </svg>
-                        </span>
-                        <h3>Built for<br>Today</h3>
-                    </article>
-                </div>
-            </div>
+.krlegacy-new .kl-image-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            <div class="kr-roots-visual">
-                <div class="kr-roots-yellow-blob" aria-hidden="true"></div>
-                <div class="kr-roots-photo">
-                    <img src="{{ asset('krunko/our-story/images/roots-lotus-field.png') }}"
-                         alt="Lotus flowers in a makhana-growing landscape" loading="lazy">
-                </div>
-                <span class="kr-roots-spark" aria-hidden="true"><i></i><i></i><i></i></span>
-            </div>
-        </div>
-    </div>
-</section>
+/* LIGHT GREEN SHAPE BEHIND IMAGE */
 
-<section class="kr-process-section" aria-labelledby="kr-process-heading">
-    <div class="kr-rp-container">
-        <div class="kr-process-heading">
-            <p class="kr-rp-eyebrow">OUR PROCESS</p>
-            <h2 id="kr-process-heading">From Farm to <span>Family.</span></h2>
-            <p>Every step is handled with care, from sourcing and processing to the finished makhana.</p>
-        </div>
+.krlegacy-new .kl-image-wrap::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 88%;
+    aspect-ratio: 1;
+    background: #e4eea0;
+    border-radius: 55% 45% 58% 42% /
+                   40% 60% 44% 56%;
+    transform: rotate(-12deg);
+}
 
-        <div class="kr-process-steps">
-            <article class="kr-process-step">
-                <img src="{{ asset('krunko/our-story/images/process-source.png') }}" alt="Makhana lotus plants" loading="lazy">
-                <h3>Source</h3>
-                <p>From makhana-growing regions</p>
-            </article>
-            <span class="kr-process-arrow" aria-hidden="true">→</span>
-            <article class="kr-process-step">
-                <img src="{{ asset('krunko/our-story/images/process-handle.png') }}" alt="Bowl of plain makhana" loading="lazy">
-                <h3>Handle</h3>
-                <p>Careful handling and processing</p>
-            </article>
-            <span class="kr-process-arrow" aria-hidden="true">→</span>
-            <article class="kr-process-step">
-                <img src="{{ asset('krunko/our-story/images/process-check.png') }}" alt="Worker checking food production" loading="lazy">
-                <h3>Check</h3>
-                <p>Attention to product quality</p>
-            </article>
-            <span class="kr-process-arrow" aria-hidden="true">→</span>
-            <article class="kr-process-step">
-                <img src="{{ asset('krunko/our-story/images/process-handle.png') }}" alt="Ready-to-enjoy makhana" loading="lazy">
-                <h3>Share</h3>
-                <p>Ready for people to enjoy</p>
-            </article>
-        </div>
-    </div>
-</section>
+.krlegacy-new .kl-years-image {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* YELLOW DECORATIVE LINES */
+
+.krlegacy-new .kl-image-rays {
+    position: absolute;
+    top: 9%;
+    right: 8%;
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+    transform: rotate(-20deg);
+}
+
+.krlegacy-new .kl-image-rays i {
+    display: block;
+    width: 7px;
+    height: 31px;
+    border-radius: 20px;
+    background: #f7ba00;
+}
+
+.krlegacy-new .kl-image-rays i:nth-child(2) {
+    height: 23px;
+    margin-top: 10px;
+    transform: rotate(30deg);
+}
+
+.krlegacy-new .kl-image-rays i:nth-child(3) {
+    height: 17px;
+    margin-top: 19px;
+    transform: rotate(55deg);
+}
+
+/* RIGHT SIDE - STORY */
+
+.krlegacy-new .kl-story-content {
+    padding-left: 40px;
+    border-left: 1px solid #d5ddc7;
+}
+
+.krlegacy-new .kl-story-content p {
+    margin: 0 0 23px;
+    color: #263627;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.krlegacy-new .kl-story-content p:last-child {
+    margin-bottom: 0;
+}
+
+.krlegacy-new .kl-story-content strong {
+    color: var(--kl-dark);
+    font-weight: 900;
+}
+
+/* =========================================
+   CHAIRPERSON QUOTE
+========================================= */
+
+.krlegacy-new .kl-quote {
+    position: relative;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    align-items: center;
+    gap: 35px;
+    margin: 0 10px 70px 0;
+    padding: 45px 60px 48px 45px;
+
+    background: var(--kl-green);
+    color: #ffffff;
+
+    border-radius: 65px 50px 65px 50px /
+                   35px 60px 35px 50px;
+
+    box-shadow: 10px 11px 0 var(--kl-yellow);
+}
+
+.krlegacy-new .kl-quote-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 130px;
+    border-right: 1px solid rgba(255,255,255,0.5);
+
+    color: var(--kl-yellow);
+    font-family: Georgia, serif;
+    font-size: 165px;
+    line-height: 0.7;
+    padding-top: 35px;
+}
+
+.krlegacy-new .kl-quote-text blockquote {
+    margin: 0 0 20px;
+    color: #fffdf2;
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: clamp(23px, 3vw, 33px);
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+}
+
+.krlegacy-new .kl-quote-text figcaption {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.krlegacy-new .kl-quote-text figcaption strong {
+    color: var(--kl-yellow);
+    font-weight: 900;
+}
+
+/* =========================================
+   BOTTOM SIGNATURE
+========================================= */
+
+.krlegacy-new .kl-signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.krlegacy-new .kl-leaf-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.krlegacy-new .kl-leaf-row span {
+    width: 100%;
+    max-width: 140px;
+    height: 1px;
+    background: #95ac7b;
+}
+
+.krlegacy-new .kl-leaf-row svg {
+    width: 44px;
+    height: 40px;
+    color: var(--kl-green);
+    flex-shrink: 0;
+}
+
+.krlegacy-new .kl-signature-name {
+    color: var(--kl-dark);
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.krlegacy-new .kl-tagline {
+    display: inline-block;
+    padding: 9px 30px;
+    background: var(--kl-yellow);
+    color: var(--kl-dark);
+    border-radius: 50% 15% 45% 14% /
+                   20% 35% 15% 30%;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    transform: rotate(-2deg);
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .krlegacy-new {
+        padding: 75px 24px;
+    }
+
+    .krlegacy-new .kl-story-grid {
+        grid-template-columns: 40% 1fr;
+        gap: 30px;
+    }
+
+    .krlegacy-new .kl-story-content {
+        padding-left: 25px;
+    }
+
+    .krlegacy-new .kl-image-wrap {
+        min-height: 330px;
+    }
+
+    .krlegacy-new .kl-quote {
+        grid-template-columns: 105px 1fr;
+        gap: 25px;
+        padding: 35px;
+    }
+
+    .krlegacy-new .kl-quote-icon {
+        font-size: 115px;
+        min-height: 100px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .krlegacy-new {
+        padding: 60px 16px 65px;
+    }
+
+    .krlegacy-new::before {
+        width: 170px;
+        height: 170px;
+        top: -90px;
+        left: -90px;
+    }
+
+    .krlegacy-new::after {
+        width: 150px;
+        height: 150px;
+        right: -85px;
+        bottom: -95px;
+    }
+
+    .krlegacy-new .kl-header {
+        margin-bottom: 35px;
+    }
+
+    .krlegacy-new .kl-eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        padding: 12px 16px;
+        margin-bottom: 18px;
+    }
+
+    .krlegacy-new .kl-title {
+        font-size: clamp(35px, 9vw, 50px);
+        letter-spacing: -1.5px;
+    }
+
+    .krlegacy-new .kl-yellow-stroke {
+        width: 130px;
+        height: 7px;
+        margin: 12px auto 20px;
+    }
+
+    .krlegacy-new .kl-subtitle {
+        font-size: 20px;
+    }
+
+    .krlegacy-new .kl-story-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .krlegacy-new .kl-image-wrap {
+        width: 100%;
+        min-height: 0;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 12px 0;
+    }
+
+    .krlegacy-new .kl-years-image {
+        max-width: 340px;
+    }
+
+    .krlegacy-new .kl-story-content {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .krlegacy-new .kl-story-content p {
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 17px;
+    }
+
+    .krlegacy-new .kl-quote {
+        display: block;
+        margin: 0 7px 55px 0;
+        padding: 34px 25px;
+        border-radius: 35px 25px 35px 25px;
+        box-shadow: 7px 8px 0 var(--kl-yellow);
+    }
+
+    .krlegacy-new .kl-quote-icon {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+        margin: 0 0 12px;
+        border-right: none;
+        font-size: 86px;
+        line-height: 0.6;
+        text-align: left;
+    }
+
+    .krlegacy-new .kl-quote-text blockquote {
+        font-size: 22px;
+        line-height: 1.45;
+    }
+
+    .krlegacy-new .kl-quote-text figcaption {
+        font-size: 13px;
+    }
+
+    .krlegacy-new .kl-signature-name {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    .krlegacy-new .kl-tagline {
+        font-size: 18px;
+        padding: 8px 22px;
+    }
+}
+</style>
 
 
-{{-- OUR STORY: WHY KRUNKO + OUR PEOPLE. No header / footer. --}}
-<section class="ksp-story-blocks" aria-label="Why KRUNKO and our people">
-    <div class="ksp-story-container">
+{{-- =========================================
+     KAUSHAL GROUP SECTION HTML
+========================================= --}}
 
-        {{-- SECTION 04: WHY KRUNKO --}}
-        <div class="ksp-why-grid" id="why-krunko">
-            <div class="ksp-why-image">
-                <img
-                    src="{{ asset('krunko/our-story/images/why-krunko-mascot.png') }}"
-                    alt="KRUNKO mascot holding a flavoured makhana jar"
-                    loading="lazy"
-                >
-            </div>
+<section
+    class="krlegacy-new"
+    id="kaushal-group-legacy"
+    aria-labelledby="kl-legacy-title"
+>
 
-            <div class="ksp-why-copy">
-                <span class="ksp-eyebrow">WHY KRUNKO</span>
+    <div class="kl-container">
 
-                <h2>Tradition got a<br><span>fun new voice.</span></h2>
+        {{-- SECTION HEADING --}}
+        <div class="kl-header">
 
-                <p>
-                    KRUNKO was created to take the timeless goodness
-                    of makhana and turn it into a fun, tasty and everyday
-                    snack for everyone.
-                </p>
+            <span class="kl-eyebrow">
+                THE LEGACY BEHIND OUR JOURNEY
+            </span>
 
-                <a href="{{ url('/krunko/customer') }}" class="ksp-cta">
-                    Explore KRUNKO
-                    <span aria-hidden="true">&rarr;</span>
-                </a>
-            </div>
-        </div>
-
-        {{-- SECTION 05: OUR PEOPLE --}}
-        <div class="ksp-people-grid" id="our-people">
-            <div class="ksp-people-copy">
-                <span class="ksp-eyebrow">OUR PEOPLE</span>
-
-                <h2>Built by people.<br><span>Not just machines.</span></h2>
-
-                <p>
-                    Behind every pack of KRUNKO is a dedicated team,
-                    from farmers and sourcing partners to the people
-                    who help with processing and quality. Their care
-                    is part of every step of our journey.
-                </p>
-            </div>
-
-            <div class="ksp-people-photos">
-                <div class="ksp-photo-card ksp-team-photo">
-                    <img
-                        src="{{ asset('krunko/our-story/images/our-people-team.PNG') }}"
-                        alt="Food production team working at a manufacturing facility"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="ksp-photo-card ksp-processing-photo">
-                    <img
-                        src="{{ asset('krunko/our-story/images/our-people-processin.PNG') }}"
-                        alt="Popped makhana moving through a food processing line"
-                        loading="lazy"
-                    >
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="kr-promise-section" id="our-promise">
-    <div class="kr-promise-wrap">
-
-        <div class="kr-promise-heading">
-            <span class="kr-promise-eyebrow">OUR PROMISE</span>
-
-            <h2>
-                Keep it simple.
-                <span>Keep it meaningful.</span>
+            <h2 class="kl-title" id="kl-legacy-title">
+                KAUSHAL <span>GROUP</span>
             </h2>
-        </div>
 
-        <div class="kr-promise-grid">
+            <span
+                class="kl-yellow-stroke"
+                aria-hidden="true"
+            ></span>
 
-            <div class="kr-promise-card">
-                <div class="kr-promise-icon">
-                    <i class="fa-solid fa-leaf"></i>
-                </div>
-                <h3>Care in handling</h3>
-                <p>
-                    Thoughtful processes
-                    for a better product.
-                </p>
-            </div>
-
-            <div class="kr-promise-card">
-                <div class="kr-promise-icon">
-                    <i class="fa-solid fa-seedling"></i>
-                </div>
-                <h3>Clear product focus</h3>
-                <p>
-                    Real makhana,
-                    real goodness.
-                </p>
-            </div>
-
-            <div class="kr-promise-card">
-                <div class="kr-promise-icon">
-                    <i class="fa-solid fa-check"></i>
-                </div>
-                <h3>Consistency matters</h3>
-                <p>
-                    Reliable quality
-                    in every pack.
-                </p>
-            </div>
-
-            <div class="kr-promise-card">
-                <div class="kr-promise-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <h3>Proud of our roots</h3>
-                <p>
-                    From Bihar, with
-                    care and commitment.
-                </p>
-            </div>
+            <p class="kl-subtitle">
+                A Legacy Built on Trust.<br>
+                A Future Driven by Quality.
+            </p>
 
         </div>
-    </div>
-</section>
 
-    {{-- <section class="origin-section story-space" id="journey">
-        <div class="story-container origin-grid">
-            <div class="origin-heading">
-                <p class="section-kicker">01 · WHERE IT ALL BEGAN</p>
-                <h2>A story that starts <span>close to the source.</span></h2>
-            </div>
 
-            <div class="origin-copy">
-                <p class="lead">
-                    For us, makhana is more than a product. It is part of a region, a livelihood
-                    and a food tradition that has travelled through generations.
-                </p>
-                <p>
-                    Kaushal Agro Industries was built with a simple thought: take this familiar ingredient,
-                    handle it with care, and make it easier for more people and businesses to experience.
-                    That same thought now connects our plain makhana business and KRUNKO, our playful
-                    flavoured makhana brand.
-                </p>
+        {{-- IMAGE + STORY CONTENT --}}
+        <div class="kl-story-grid">
 
-                <div class="origin-facts">
-                    <div><strong>01</strong><span>Rooted in Bihar</span></div>
-                    <div><strong>02</strong><span>Focused on makhana</span></div>
-                    <div><strong>03</strong><span>Built for today</span></div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+            {{-- LEFT: CUSTOM 40+ IMAGE --}}
+            <div class="kl-image-wrap">
 
-    {{-- <section class="journey-section story-space">
-        <div class="story-container">
-            <div class="section-intro centered">
-                <p class="section-kicker">02 · FROM FARM TO FAMILY</p>
-                <h2>One ingredient.<br><span>Many careful steps.</span></h2>
-                <p>Every stage matters, from where makhana begins to how it reaches the people who enjoy it.</p>
-            </div>
-
-            <div class="journey-track">
-                <article class="journey-card">
-                    <div class="journey-icon">✦</div>
-                    <span>STEP 01</span>
-                    <h3>Source</h3>
-                    <p>The journey starts close to makhana-growing regions and trusted supply networks.</p>
-                </article>
-
-                <article class="journey-card">
-                    <div class="journey-icon">◎</div>
-                    <span>STEP 02</span>
-                    <h3>Handle</h3>
-                    <p>The product moves through planned handling and processing steps at the unit.</p>
-                </article>
-
-                <article class="journey-card">
-                    <div class="journey-icon">✓</div>
-                    <span>STEP 03</span>
-                    <h3>Check</h3>
-                    <p>Quality and consistency are kept in focus before the product moves forward.</p>
-                </article>
-
-                <article class="journey-card">
-                    <div class="journey-icon">☺</div>
-                    <span>STEP 04</span>
-                    <h3>Share</h3>
-                    <p>Plain or flavoured, the final goal is simple: make makhana easier to enjoy and sell.</p>
-                </article>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- <section class="krunko-story story-space">
-        <div class="story-container krunko-grid">
-            <div class="krunko-visual">
-                <div class="yellow-orbit"></div>
-                <img src="{{ asset('krunko/assets/logo.png') }}" alt="KRUNKO" class="krunko-logo">
-                <div class="krunko-tag">A playful new chapter</div>
-            </div>
-
-            <div class="krunko-copy">
-                <p class="section-kicker">03 · WHY KRUNKO</p>
-                <h2>Tradition got a <span>fun new voice.</span></h2>
-                <p class="lead">
-                    KRUNKO grew from the idea that makhana can feel familiar and fresh at the same time.
-                </p>
-                <p>
-                    While Kaushal Agro carries the roots, sourcing and business side of the journey,
-                    KRUNKO brings colour, flavour and personality to the consumer experience.
-                    It is our way of taking a traditional snack into modern everyday moments.
-                </p>
-
-                <a href="{{ route('krunko.customer') }}" class="btn btn-dark">Explore KRUNKO <span>↗</span></a>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- <section class="people-section story-space">
-        <div class="story-container">
-            <div class="people-grid">
-                <div class="people-copy">
-                    <p class="section-kicker">04 · PEOPLE BEHIND THE CRUNCH</p>
-                    <h2>Built by people.<br><span>Not just machines.</span></h2>
-                    <p>
-                        Behind every product are people making decisions, handling materials,
-                        checking details and moving the work forward every day.
-                    </p>
-                    <p>
-                        This page is designed for your real team, factory and sourcing photos.
-                        Replace the image slots with your actual photographs to make the story truly yours.
-                    </p>
-                </div>
-
-                <div class="photo-collage">
-                    <div class="photo-slot large"
-                         style="background-image:url('{{ asset('krunko/assets/farm-bowl.jpg') }}')">
-                        <span>TEAM / FACTORY</span>
-                    </div>
-                    <div class="photo-slot"
-                         style="background-image:url('{{ asset('krunko/assets/mascot-farm.jpg') }}')">
-                        <span>ROOTS / SOURCE</span>
-                    </div>
-                    <div class="photo-slot accent">
-                        <strong>REAL PEOPLE.<br>REAL ROOTS.</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- <section class="promise-section story-space">
-        <div class="story-container">
-            <div class="section-intro">
-                <p class="section-kicker">05 · OUR PROMISE</p>
-                <h2>Keep it simple.<br><span>Keep it meaningful.</span></h2>
-            </div>
-
-            <div class="promise-grid">
-                <article>
-                    <span>01</span>
-                    <h3>Care in handling</h3>
-                    <p>Thoughtful handling from sourcing through the next stage of the product journey.</p>
-                </article>
-                <article>
-                    <span>02</span>
-                    <h3>Clear product focus</h3>
-                    <p>Plain makhana for business needs and flavoured makhana for consumer snacking.</p>
-                </article>
-                <article>
-                    <span>03</span>
-                    <h3>Consistency matters</h3>
-                    <p>A focus on making the product experience dependable and easy to understand.</p>
-                </article>
-                <article>
-                    <span>04</span>
-                    <h3>Proud of our roots</h3>
-                    <p>A business story connected to Bihar, makhana and the people behind the work.</p>
-                </article>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- <section class="two-paths story-space">
-        <div class="story-container">
-            <div class="section-intro centered">
-                <p class="section-kicker">06 · TWO WAYS WE SERVE</p>
-                <h2>One makhana story.<br><span>Two clear journeys.</span></h2>
-            </div>
-
-            <div class="path-grid">
-                <article class="path-card plain-card">
-                    <span class="path-label">FOR BUSINESS</span>
-                    <h3>Plain Makhana</h3>
-                    <p>For retailers, traders and bulk buyers looking to start a supply conversation.</p>
-                    <a href="{{ url('/the-farm-project') }}">Explore Plain Makhana <span>↗</span></a>
-                </article>
-
-                <article class="path-card flavour-card">
-                    <span class="path-label">FOR SNACK LOVERS</span>
-                    <h3>Flavoured Makhana</h3>
-                    <p>KRUNKO brings a more playful, colourful and flavour-led side of makhana.</p>
-                    <a href="{{ route('krunko.customer') }}">Explore KRUNKO Flavours <span>↗</span></a>
-                </article>
-            </div>
-        </div>
-    </section> --}}
-
-    <section class="roots-section">
-        <div class="story-container roots-grid">
-            <div class="roots-copy">
-                <p class="section-kicker">07 · WHERE WE ARE ROOTED</p>
-                <h2>Purnia, Bihar.</h2>
-                <p>
-                    Kaushal Agro Industries Pvt Ltd<br>
-                    Plug n Play Shed B1, Gate No. 3,<br>
-                    Industrial Growth Centre Maranga,<br>
-                    Purnia, Bihar - 854303
-                </p>
-                <a class="btn btn-yellow" href="{{ route('krunko.customer') }}#contact">Contact us <span>↗</span></a>
-            </div>
-
-            <div class="roots-map">
-                <iframe
-                    title="Kaushal Agro Industries location in Purnia"
-                    src="https://www.google.com/maps?q=Kaushal%20Agro%20Industries%20Pvt%20Ltd%20Industrial%20Growth%20Centre%20Maranga%20Purnia%20Bihar%20854303&output=embed"
+                <img
+                    src="{{ asset('krunko/our-story/images/40-years-legacy.png') }}"
+                    alt="Kaushal Group, 40 plus years of experience"
+                    class="kl-years-image"
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    decoding="async"
+                >
+
+                <span class="kl-image-rays" aria-hidden="true">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+
             </div>
-        </div>
-    </section>
 
-    {{-- <section class="closing-section">
-        <div class="story-container closing-inner">
-            <p>FROM OUR ROOTS TO YOUR EVERYDAY</p>
-            <h2>Every crunch carries a little piece of <span>where we come from.</span></h2>
-            <div class="closing-actions">
-                <a href="{{ url('/the-farm-project') }}" class="btn btn-yellow">Plain Makhana <span>↗</span></a>
-                <a href="{{ route('krunko.customer') }}" class="btn btn-light">KRUNKO Flavours <span>↗</span></a>
+
+            {{-- RIGHT: COMPLETE COMPANY STORY --}}
+            <div class="kl-story-content">
+
+                <p>
+                    With over
+                    <strong>40 years of experience</strong>,
+                    our Chairperson,
+                    <strong>Mr. Sunil Agarwal</strong>,
+                    has built the foundation of Kaushal Group
+                    on hard work, integrity and an
+                    uncompromising commitment to quality.
+                </p>
+
+                <p>
+                    Guided by his vision and leadership,
+                    and carried forward by
+                    <strong>
+                        Managing Directors Mrs. Sarita Agarwal,
+                        Ayush Agarwal and Vivek Agarwal
+                    </strong>,
+                    the Group continues to strengthen its
+                    legacy in the agro-products sector.
+                </p>
+
+                <p>
+                    With deep agricultural roots and a
+                    progressive outlook, we strive to
+                    transform India's agricultural produce
+                    through quality-driven processing,
+                    innovation and responsible
+                    business practices.
+                </p>
+
+                <p>
+                    At Kaushal Group, quality is not just
+                    a promise; it is a responsibility we
+                    uphold with every product, every
+                    partnership and every customer
+                    we serve.
+                </p>
+
             </div>
+
         </div>
-    </section> --}}
 
-</main>
 
-@include('krunko.partials.footer')
+        {{-- CHAIRPERSON QUOTE --}}
+        <figure class="kl-quote">
 
+            <span
+                class="kl-quote-icon"
+                aria-hidden="true"
+            >“</span>
+
+            <div class="kl-quote-text">
+
+                <blockquote>
+                    Four decades of experience have taught
+                    us that a business is built with hard
+                    work, but a legacy is built with trust.
+                </blockquote>
+
+                <figcaption>
+                    —
+                    <strong>Mr. Sunil Agarwal</strong>,
+                    Chairperson
+                </figcaption>
+
+            </div>
+
+        </figure>
+
+
+        {{-- BOTTOM BRAND SIGNATURE --}}
+        <div class="kl-signature">
+
+            <div class="kl-leaf-row" aria-hidden="true">
+
+                <span></span>
+
+                <svg
+                    viewBox="0 0 50 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M7 36C16 20 25 13 42 5
+                           M21 20C13 12 8 10 7 8
+                           C21 7 27 13 21 20
+                           M28 14C27 5 35 3 45 3
+                           C43 14 35 18 28 14
+                           M13 29C3 24 3 18 2 16
+                           C15 17 20 23 13 29Z"
+                        stroke="currentColor"
+                        stroke-width="2.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+
+                <span></span>
+
+            </div>
+
+            <strong class="kl-signature-name">
+                KAUSHAL GROUP
+            </strong>
+
+            <em class="kl-tagline">
+                From Soil To Soul.
+            </em>
+
+        </div>
+
+    </div>
+
+</section>
+    </main>
+    @include('krunko.partials.footer')
+    
+<script src="/assets/krunko/js/enquiry-cart.js" defer></script>
+<script src="{{ asset('krunko/js/enquiry-cart.js') }}" defer></script>
 </body>
+
 </html>

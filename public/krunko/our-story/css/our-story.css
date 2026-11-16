@@ -1534,7 +1534,7 @@ h3 {
 .ksp-why-copy {
     min-width: 0;
     overflow: hidden;
-    border-radius: 18px;
+    border-radius: 0px !important;
 }
 
 .ksp-why-image {
@@ -1939,6 +1939,312 @@ h3 {
     }
 
     .kr-promise-card p {
+        font-size: 13px;
+    }
+}
+
+/* ======================================
+   KAUSHAL GROUP - OUR LEGACY
+====================================== */
+
+.kg-legacy-section {
+    background: #fff9e9;
+    padding: 100px 20px;
+    color: #181a14;
+}
+
+.kg-legacy-section *,
+.kg-legacy-section *::before,
+.kg-legacy-section *::after {
+    box-sizing: border-box;
+}
+
+.kg-legacy-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* HEADING */
+
+.kg-legacy-heading {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.kg-legacy-eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #365b28;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.kg-legacy-heading h2 {
+    margin: 0 0 20px;
+    color: #181a14;
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.kg-legacy-heading h2 span {
+    color: #365b28;
+}
+
+.kg-legacy-heading h3 {
+    margin: 0;
+    color: #365b28;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* TWO COLUMN CONTENT */
+
+.kg-legacy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: start;
+    margin-bottom: 65px;
+}
+
+.kg-legacy-intro,
+.kg-legacy-story {
+    min-width: 0;
+}
+
+.kg-legacy-grid p {
+    margin: 0 0 22px;
+    color: #4d5149;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.kg-legacy-grid p:last-child {
+    margin-bottom: 0;
+}
+
+.kg-legacy-grid p strong {
+    color: #222b20;
+    font-weight: 800;
+}
+
+/* 40 YEARS BOX */
+
+.kg-legacy-years {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+    padding: 28px;
+    border-radius: 22px;
+    background: #ffdf00;
+}
+
+.kg-legacy-years > strong {
+    color: #181a14;
+    font-size: clamp(60px, 7vw, 90px);
+    font-weight: 900;
+    letter-spacing: -5px;
+    line-height: 1;
+}
+
+.kg-legacy-years > strong span {
+    color: #365b28;
+}
+
+.kg-legacy-years > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #365b28;
+}
+
+.kg-legacy-years > div b {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.kg-legacy-years > div span {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+/* QUOTE BOX */
+
+.kg-legacy-quote {
+    position: relative;
+    margin: 0;
+    padding: 55px 70px;
+    border-radius: 25px;
+    background: #365b28;
+    text-align: center;
+}
+
+.kg-legacy-quote-icon {
+    display: block;
+    margin-bottom: -12px;
+    color: #ffdf00;
+    font-family: Georgia, serif;
+    font-size: 100px;
+    line-height: .8;
+}
+
+.kg-legacy-quote blockquote {
+    max-width: 850px;
+    margin: 20px auto 28px;
+    color: #fffcee;
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.5;
+}
+
+.kg-legacy-quote figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.kg-legacy-quote figcaption strong {
+    color: #ffdf00;
+    font-size: 16px;
+}
+
+.kg-legacy-quote figcaption span {
+    color: #e0ebd5;
+    font-size: 13px;
+}
+
+/* BOTTOM TAGLINE */
+
+.kg-legacy-tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+    color: #365b28;
+}
+
+.kg-legacy-tagline strong {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.kg-legacy-tagline em {
+    font-size: 16px;
+}
+
+.kg-legacy-tagline > span:first-child,
+.kg-legacy-tagline > span:last-child {
+    color: #b6a321;
+    font-size: 21px;
+}
+
+.kg-tagline-divider {
+    width: 2px;
+    height: 18px;
+    background: #c9cbb8;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .kg-legacy-section {
+        padding: 70px 24px;
+    }
+
+    .kg-legacy-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .kg-legacy-heading {
+        margin-bottom: 45px;
+    }
+
+    .kg-legacy-years {
+        max-width: 520px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .kg-legacy-section {
+        padding: 55px 18px;
+    }
+
+    .kg-legacy-heading h2 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .kg-legacy-heading h3 {
+        font-size: 21px;
+    }
+
+    .kg-legacy-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .kg-legacy-grid {
+        margin-bottom: 35px;
+    }
+
+    .kg-legacy-years {
+        gap: 15px;
+        padding: 22px 18px;
+    }
+
+    .kg-legacy-years > strong {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+    .kg-legacy-years > div b {
+        font-size: 11px;
+    }
+
+    .kg-legacy-years > div span {
+        font-size: 15px;
+    }
+
+    .kg-legacy-grid p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .kg-legacy-quote {
+        padding: 35px 20px;
+        border-radius: 18px;
+    }
+
+    .kg-legacy-quote-icon {
+        font-size: 75px;
+    }
+
+    .kg-legacy-quote blockquote {
+        font-size: 21px;
+    }
+
+    .kg-legacy-tagline {
+        gap: 10px;
+    }
+
+    .kg-legacy-tagline strong {
+        font-size: 12px;
+    }
+
+    .kg-legacy-tagline em {
         font-size: 13px;
     }
 }

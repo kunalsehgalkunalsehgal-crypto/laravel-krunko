@@ -72,7 +72,8 @@
     </div>
     <div class="ka-hero__visual" aria-hidden="true">
         <img
-            src="{{ asset('assets/kaushal-landing/images/makhana-bowl.webp') }}"
+            src="{{ asset('assets/kaushal-landing/images/kaushal-agro-new-hero.webp') }}"
+            {{-- src="{{ asset('assets/kaushal-landing/images/makhana-bowl.webp') }}" --}}
             alt=""
             width="1509"
             height="1035"

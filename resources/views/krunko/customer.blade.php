@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Meet KRUNKO: wholesome makhana, irresistible flavours and a brighter way to snack.">
+        
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="stylesheet" href="/assets/krunko/css/enquiry-cart.css">
+
     <title>KRUNKO — Crunch Big. Snack Smart.</title>
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('krunko/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('krunko/css/enquiry-cart.css') }}">
     <script src="{{ asset('krunko/js/script.js') }}" defer></script>
 </head>
 
@@ -321,7 +326,7 @@
                 </div>
                 <div class="why-grid"><img class="why-mascot" src="{{ asset('krunko/assets/demo 2.png') }}"
                         alt="Makhana mascot holding a snack pack" loading="lazy">
-                    <div class="benefits">
+                    {{-- <div class="benefits">
                         <article><span>✧</span>
                             <div>
                                 <h3>Rich in Nutrition</h3>
@@ -346,7 +351,53 @@
                                 <p>Classic to quirky, find your kind of crunch.</p>
                             </div>
                         </article>
-                    </div><img class="why-bowl" src="{{ asset('krunko/assets/foot2.webp') }}"
+                    </div> --}}
+
+<div class="benefits">
+
+    <article>
+        <span>
+            <i class="fa-solid fa-leaf"></i>
+        </span>
+        <div>
+            <h3>Rich in Nutrition</h3>
+            <p>Goodness with protein, calcium and fiber.</p>
+        </div>
+    </article>
+
+    <article>
+        <span>
+            <i class="fa-solid fa-heart"></i>
+        </span>
+        <div>
+            <h3>Guilt Free Snacking</h3>
+            <p>A tasty little upgrade to your snack break.</p>
+        </div>
+    </article>
+
+    <article>
+        <span>
+            <i class="fa-solid fa-seedling"></i>
+        </span>
+        <div>
+            <h3>Sourced with Care</h3>
+            <p>From trusted farms to your hands.</p>
+        </div>
+    </article>
+
+    <article>
+        <span>
+            <i class="fa-solid fa-fire-flame-curved"></i>
+        </span>
+        <div>
+            <h3>Irresistible Flavours</h3>
+            <p>Classic to quirky, find your kind of crunch.</p>
+        </div>
+    </article>
+
+</div>
+
+                    <img class="why-bowl" src="{{ asset('krunko/assets/foot2.webp') }}"
                         alt="Bowl of makhana beside a green snack pack" loading="lazy">
                 </div>
             </div>
@@ -370,7 +421,9 @@
                 <p>KRUNKO is a proud brand by Kaushal Agro Industries, rooted in a passion for bringing the goodness of
                     makhana to every home.</p>
                 <p>We believe everyday snacking should be full of flavour, simple pleasures and ingredients you feel
-                    good about.</p><button class="text-link" data-info="story">Know More →</button>
+                    good about.</p>
+                    {{-- <button class="text-link" data-info="story">Know More →</button> --}}
+                <a  class="text-link" href="{{ route('krunko.our-story') }}">View Our Story →</a>
             </div>
         </section>
         <!-- Social Feed -->
@@ -404,6 +457,9 @@
         </section>
     </main>
     @include('krunko.partials.footer')
+    
+<script src="/assets/krunko/js/enquiry-cart.js" defer></script>
+<script src="{{ asset('krunko/js/enquiry-cart.js') }}" defer></script>
 </body>
 
 </html>

@@ -35,9 +35,10 @@ class FarmProjectEnquiryController extends Controller
             'shopAddress' => ['nullable', 'string', 'max:180'],
             'products' => ['required', 'array', 'min:1', 'max:3'],
             'products.*' => ['required', 'string', 'distinct', Rule::in(['Premium', 'Supreme', 'Standard'])],
-            'grade_premium' => [Rule::requiredIf(in_array('Premium', $products, true)), 'nullable', Rule::in(['3 PURE', '4 PURE', '5 PURE', '6 PURE'])],
-            'grade_supreme' => [Rule::requiredIf(in_array('Supreme', $products, true)), 'nullable', Rule::in(['4 PURE HANDPICKED', '5 PURE HANDPICKED', '6 PURE HANDPICKED'])],
-            'grade_standard' => [Rule::requiredIf(in_array('Standard', $products, true)), 'nullable', Rule::in(['4+ PLUS', '5+ PLUS', '6+ PLUS'])],
+            'grade_premium' => [Rule::requiredIf(in_array('Premium', $products, true)), 'nullable',
+             Rule::in(['5 Plus', '5 Plus handpicked', '6 Plus', '6 Plus handpicked '])],
+            'grade_supreme' => [Rule::requiredIf(in_array('Supreme', $products, true)), 'nullable', Rule::in(['4 Plus', '4 Plus handpicked', '5 Pure'])],
+            'grade_standard' => [Rule::requiredIf(in_array('Standard', $products, true)), 'nullable', Rule::in(['3 Plus', '4 pure handpicked', '4 pure'])],
             'monthlyVolume' => ['nullable', 'string', 'max:80'],
             'buyingTimeline' => ['nullable', 'string', 'max:80'],
             'email' => ['nullable', 'email:rfc', 'max:120'],
@@ -45,7 +46,7 @@ class FarmProjectEnquiryController extends Controller
             'consent' => ['accepted'],
         ]);
 
-        $recipient = config('farm.enquiry_to');
+        $recipient = config('mail.from.address');
         if (!$recipient || !filter_var($recipient, FILTER_VALIDATE_EMAIL)) {
             Log::error('Farm Project enquiry inbox is not configured.');
             return response()->json([
