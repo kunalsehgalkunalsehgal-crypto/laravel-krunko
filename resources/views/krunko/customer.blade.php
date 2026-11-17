@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="hero-art">
-                    <div class="hero-stamp">100%<small>CRUNCH<br>100% YOU</small></div><img src="{{ asset('krunko/assets/jar-cheese.jpg') }}"
+                    <div class="hero-stamp">100%<small>CRUNCH<br>100% YOU</small></div><img src="{{ asset('krunko/assets/chesse1.webp') }}"
                         alt="KRUNKO Cheese makhana jar surrounded by crunchy makhana"><span class="hero-caption">YOUR
                         NEW SNACK OBSESSION.</span>
                 </div>
@@ -73,35 +73,35 @@
                     <div class="showcase-slider" id="showcase-products" role="region"
                         aria-label="Explore five KRUNKO flavours" aria-describedby="showcase-help" tabindex="0">
                         <a class="showcase-card" href="#shop" aria-label="Shop Peri Peri Makhana">
-                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/jar-peri.webp') }}"
+                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/periperi.webp') }}"
                                 alt="KRUNKO Peri Peri makhana jar" width="600" height="600" loading="lazy" decoding="async" draggable="false"></div>
                             <span class="showcase-card-number" aria-hidden="true">01 / BOLD & SPICY</span>
                             <h3>Peri Peri Makhana</h3>
                             <p>A little fire in every bite.</p>
                         </a>
                         <a class="showcase-card" href="#shop" aria-label="Shop Himalayan Salt Makhana">
-                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/himaliyan salt.webp') }}"
+                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/himalyan1.webp') }}"
                                 alt="KRUNKO Himalayan Salt makhana jar" width="600" height="600" loading="lazy" decoding="async" draggable="false"></div>
                             <span class="showcase-card-number" aria-hidden="true">02 / SIMPLY CLASSIC</span>
                             <h3>Himalayan Salt Makhana</h3>
                             <p>Simple, salty, satisfying.</p>
                         </a>
                         <a class="showcase-card" href="#shop" aria-label="Shop Tangy Tomato Makhana">
-                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/jar-tomato.webp') }}"
+                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/tangytomato.webp') }}"   
                                 alt="KRUNKO Tangy Tomato makhana jar" width="600" height="600" loading="lazy" decoding="async" draggable="false"></div>
                             <span class="showcase-card-number" aria-hidden="true">03 / BIG ON TANG</span>
                             <h3>Tangy Tomato Makhana</h3>
                             <p>Your bright little snack break.</p>
                         </a>
                         <a class="showcase-card" href="#shop" aria-label="Shop Gud Til Makhana">
-                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/gud til.webp') }}"
+                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/gudtill.webp') }}"
                                 alt="KRUNKO Gud Til makhana jar" width="600" height="600" loading="lazy" decoding="async" draggable="false"></div>
                             <span class="showcase-card-number" aria-hidden="true">04 / SWEET LITTLE JOY</span>
                             <h3>Gud Til Makhana</h3>
                             <p>A sweet twist on your crunch.</p>
                         </a>
                         <a class="showcase-card" href="#shop" aria-label="Shop Cheese Makhana">
-                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/jar-cheese.webp') }}"
+                            <div class="showcase-card-image"><img src="{{ asset('krunko/assets/chesse1.webp') }}"
                                 alt="KRUNKO Cheese makhana jar" width="600" height="600" loading="lazy" decoding="async" draggable="false"></div>
                             <span class="showcase-card-number" aria-hidden="true">05 / CHEESY GOODNESS</span>
                             <h3>Cheese Makhana</h3>
@@ -144,7 +144,7 @@
             <p class="search-result" role="status" hidden></p>
             <div class="jar-grid">
                 <article class="product-card" data-name="Cheese makhana jar">
-                    <div class="product-image"><img src="{{ asset('krunko/assets/jar-cheese.jpg') }}" alt="KRUNKO Cheese makhana jar"
+                    <div class="product-image"><img src="{{ asset('krunko/assets/chesse1.webp') }}" alt="KRUNKO Cheese makhana jar"
                             loading="lazy"><span class="product-tag">FAN FAVOURITE</span></div>
                     <div class="product-info">
                         <p class="eyebrow">ROASTED MAKHANA · 80 g*</p>
@@ -155,7 +155,7 @@
                     </div>
                 </article>
                 <article class="product-card" data-name="Himalayan Salt makhana jar">
-                    <div class="product-image"><img src="{{ asset('krunko/assets/jar-salt.jpg') }}" alt="KRUNKO Himalayan Salt makhana jar"
+                    <div class="product-image"><img src="{{ asset('krunko/assets/himalyan1.webp') }}" alt="KRUNKO Himalayan Salt makhana jar"
                             loading="lazy"><span class="product-tag">FLAVOUR PACKED</span></div>
                     <div class="product-info">
                         <p class="eyebrow">ROASTED MAKHANA · 80 g*</p>
@@ -167,7 +167,7 @@
                     </div>
                 </article>
                 <article class="product-card" data-name="Peri Peri makhana jar">
-                    <div class="product-image"><img src="{{ asset('krunko/assets/jar-peri.jpg') }}" alt="KRUNKO Peri Peri makhana jar"
+                    <div class="product-image"><img src="{{ asset('krunko/assets/periperi.webp') }}" alt="KRUNKO Peri Peri makhana jar"
                             loading="lazy"><span class="product-tag">FLAVOUR PACKED</span></div>
                     <div class="product-info">
                         <p class="eyebrow">ROASTED MAKHANA · 80 g*</p>
@@ -178,7 +178,7 @@
                     </div>
                 </article>
                 <article class="product-card" data-name="Tangy Tomato makhana jar">
-                    <div class="product-image"><img src="{{ asset('krunko/assets/jar-tomato.jpg') }}" alt="KRUNKO Tangy Tomato makhana jar"
+                    <div class="product-image"><img src="{{ asset('krunko/assets/tangytomato.webp') }}" alt="KRUNKO Tangy Tomato makhana jar"
                             loading="lazy"><span class="product-tag">FLAVOUR PACKED</span></div>
                     <div class="product-info">
                         <p class="eyebrow">ROASTED MAKHANA · 80 g*</p>
@@ -397,7 +397,7 @@
 
 </div>
 
-                    <img class="why-bowl" src="{{ asset('krunko/assets/foot2.webp') }}"
+                    <img class="why-bowl" src="{{ asset('krunko/assets/foot7.webp') }}"
                         alt="Bowl of makhana beside a green snack pack" loading="lazy">
                 </div>
             </div>
@@ -412,7 +412,7 @@
             </div><img src="{{ asset('krunko/assets/demo 4.png') }}" alt="Smiling makhana mascot waving from the farm" loading="lazy">
         </section>
         <!-- Our Story -->
-        <section class="story-section section container" id="story"><img class="story-photo" src="{{ asset('krunko/assets/foot1.webp') }}"
+        <section class="story-section section container" id="story"><img class="story-photo" src="{{ asset('krunko/assets/foot8.webp') }}"
                 alt="Makhana and a farm-inspired green pack" loading="lazy">
             <div class="story-copy">
                 <p class="eyebrow">ROOTED IN GOODNESS</p>
@@ -435,10 +435,10 @@
                     <p>Real people. Real crunch.</p>
                 </div><span class="feed-label">#KeepItKrunko</span>
             </div>
-            <div class="social-grid"><img src="{{ asset('krunko/assets/foot1.webp') }}" alt="Our cheerful makhana mascot"
-                    loading="lazy"><img src="{{ asset('krunko/assets/foot2.webp') }}" alt="Peri Peri KRUNKO jar" loading="lazy"><img
-                    src="{{ asset('krunko/assets/foot3.webp') }}" alt="A bowl of wholesome makhana" loading="lazy"><img
-                    src="{{ asset('krunko/assets/foot4.webp') }}" alt="Makhana packs in three colours" loading="lazy"></div>
+            <div class="social-grid"><img src="{{ asset('krunko/assets/foot8.webp') }}" alt="Our cheerful makhana mascot"
+                    loading="lazy"><img src="{{ asset('krunko/assets/foot7.webp') }}" alt="Peri Peri KRUNKO jar" loading="lazy"><img
+                    src="{{ asset('krunko/assets/foot6.webp') }}" alt="A bowl of wholesome makhana" loading="lazy"><img
+                    src="{{ asset('krunko/assets/foot5.webp') }}" alt="Makhana packs in three colours" loading="lazy"></div>
         </section>
         <!-- Newsletter -->
         <section class="newsletter">

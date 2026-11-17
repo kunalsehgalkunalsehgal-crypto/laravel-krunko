@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -128,4 +128,4 @@
 <footer class="retailer-footer"><div class="container footer-upper"><div><a class="footer-logo" href="{{ route('krunko.choose') }}"><img alt="KRUNKO" src="{{ asset('krunko/assets/krunko-logo.png') }}"/></a><p>PLAIN MAKHANA. CLEAR BUSINESS ENQUIRIES.
 A brand by Kaushal Agro Industries.</p></div><div class="footer-right"><div><strong>EXPLORE</strong><a href="#why-us">Why KRUNKO</a><a href="#plain-makhana">Plain Makhana</a><a href="#enquiry">Retailer enquiry</a></div><div><strong>GET IN TOUCH</strong><a href="mailto:info@thefarmproject.co.in">info@thefarmproject.co.in</a><a href="{{ route('krunko.choose') }}">Customer or retailer? Choose here ↗</a></div></div></div><div class="container footer-lower"><span>© KRUNKO · A brand by Kaushal Agro Industries</span><span>ONE PRODUCT. PLAIN MAKHANA. ✳</span></div></footer>
 </body>
-</html>
+</html> --}}

@@ -53,7 +53,7 @@
 }
 .fp-flow__step-title {
   margin: 0 0 8px; font: 800 clamp(16px, 1.3vw, 20px)/1.22 var(--heading, 'Outfit', Arial, sans-serif);
-  letter-spacing: -.025em; color: #102019;
+  letter-spacing: -.025em; color: var(--green);
 }
 .fp-flow__step-desc {
   margin: 0; color: #55584f;
@@ -64,7 +64,7 @@
   content: '➜'; position: absolute; top: 37%; right: -27px; z-index: 3;
   transform: translateY(-50%); color: #285636; font: 700 27px/1 Arial, sans-serif;
 } */
- .fp-flow__card:not(:nth-child(5n))::after{background:#285636;
+ .fp-flow__card:not(:nth-child(5n))::after{
     content: '➜';
     position: absolute;
     top: 51%;
@@ -73,7 +73,9 @@
     z-index: 3;
     transform: translateY(-50%);
     color: white;
-    font: 700 27px / 1 Arial, sans-serif;}
+    font: 700 19px / 1 Arial, sans-serif;
+    padding: 4px;
+  background:#285636;}
 .fp-flow__note {
   margin: 24px auto 0; text-align: center; color: #717467;
   font: 400 12px/1.5 var(--body, Arial, sans-serif);
@@ -81,7 +83,7 @@
 @media (max-width: 1199px) {
   .fp-flow__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
   .fp-flow__card:not(:nth-child(5n))::after { content: none; }
-  .fp-flow__card:not(:nth-child(3n))::after { content: '➜'; position: absolute; top: 37%; right: -27px; z-index: 3; transform: translateY(-50%); color: #285636; font: 700 27px/1 Arial, sans-serif; }
+  .fp-flow__card:not(:nth-child(3n))::after { content: '➜'; position: absolute; top: 37%; right: -30px; z-index: 3; transform: translateY(-50%); color: white; font: 700 20px/1 Arial, sans-serif; padding: 4px;}
 }
 @media (max-width: 760px) {
   .fp-flow { padding: 62px 0 70px; }

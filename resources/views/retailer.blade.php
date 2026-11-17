@@ -8,526 +8,17 @@
     <meta name="description" content="Explore THE FARM PROJECT products, view their front and back packaging, and send an enquiry for the product you need." />
     <title>THE FARM PROJECT Products for Businesses | Retailer Enquiry</title>
     <!-- Existing Farm Project design CSS -->
-    {{-- <link rel="stylesheet" href="{{ asset('assets/farm-project/css/retailer.css') }}" />
-    <!-- New expandable product styles; no manual CSS merging needed. -->
-    <link rel="stylesheet" href="{{ asset('assets/farm-project/css/retailer-products.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/farm-project/css/process-flow.css') }}" /> --}}
-    <link rel="stylesheet" href="/assets/farm-project/css/retailer.css">
+    <link rel="stylesheet" href="{{ asset('assets/farm-project/css/retailer.css') }}?v=20261117">
 
-    <link rel="stylesheet" href="/assets/farm-project/css/retailer-products.css">
+    <link rel="stylesheet" href="{{ asset('assets/farm-project/css/retailer-products.css') }}">
 
-    <link rel="stylesheet" href="/assets/farm-project/css/process-flow.css">
+    <link rel="stylesheet" href="{{ asset('assets/farm-project/css/process-flow.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    {{-- <script defer src="{{ asset('assets/farm-project/js/retailer.js') }}"></script> --}}
-    <script defer src="/assets/farm-project/js/retailer.js"></script>
+
+    <script defer src="{{ asset('assets/farm-project/js/retailer.js') }}"></script>
     <script defer src="{{ asset('assets/farm-project/js/farm-enquiry-submit.js') }}"></script>
-</head>
-
-<body class="retailer-page">
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="announce-bar">✳ THREE PRODUCTS. PLENTY OF POSSIBILITIES. ✳ LET’S TALK BUSINESS ENQUIRIES.</div>
-
-    <header class="site-header">
-        <div class="container header-row">
-            <!-- <a class="brand-logo" href="{{ url('/') }}" aria-label="The Farm Project, back to Kaushal Agro"><img src="{{ asset('assets/farm-project/images/black-logo.png') }}" alt="KRUNKO" /></a> -->
-            <a class="brand-logo" href="{{ url('/') }}" aria-label="The Farm Project, back to Kaushal Agro">
-                <img src="{{ asset('assets/farm-project/images/black-logo.png') }}" alt="The Farm Project" width="1254" height="1254" />
-            </a>
-            <nav class="retail-nav" id="retail-nav" aria-label="Retailer page navigation">
-                <a href="#why-us">Why THE FARM PROJECT</a>
-                <a href="#our-process">Our Process</a>
-                <a href="#plain-makhana">Our Products</a>
-                <a href="#how-it-works">How it works</a>
-            </nav>
-            <div class="header-controls">
-                <a class="nav-cta" href="#enquiry">Send an enquiry ↗</a>
-                <button class="mobile-nav-toggle" type="button" aria-controls="retail-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
-            </div>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <!-- HERO: existing markup and visual styles preserved -->
-        <section class="retail-hero" aria-labelledby="retailer-hero-heading">
-            <div class="container retail-hero-grid">
-                <div class="hero-message">
-                    <div class="mini-eyebrow"><span class="star-mark">✳</span> FOR RETAILERS, TRADERS &amp; BULK BUYERS
-                    </div>
-                    <h1 id="retailer-hero-heading"><span>MAKHANA</span><br /><em>PRODUCTS.</em><br />BIG POTENTIAL.</h1>
-                    <p>Explore THE FARM PROJECT products for your business. Hover to see the front and back of each
-                        pack, then open a card for details and enquire.</p>
-                    <div class="hero-actions">
-                        <a class="pill-button pill-black" href="#plain-makhana">Explore our products <span aria-hidden="true">↗</span></a>
-                        <a class="quiet-link" href="#our-process">See our process <span aria-hidden="true">↘</span></a>
-                    </div>
-                    <div class="hero-short-proof"><span><b>03</b> products</span><span class="dot-sep">✳</span><span>Product-specific enquiries</span></div>
-                </div>
-                {{-- <div class="hero-showcase plain-showcase" data-photo-container="hero">
-                    <div class="hero-image-shell">
-                        <div class="kr-hero-photo-fallback" aria-hidden="true">THE FARM PROJECT<span>✳</span></div>
-                        <img src="{{ asset('assets/farm-project/images/newimage.png') }}" class="real-photo real-photo--hero" data-real-photo="hero" alt="The Farm Project makhana product" width="900" height="900" fetchpriority="high" decoding="async" />
-                    </div>
-                </div> --}}
-                <div class="hero-showcase plain-showcase fp-hero-video-showcase">
-    <div class="hero-image-shell fp-hero-video-shell">
-        <video class="fp-hero-mascot-video" autoplay muted loop playsinline
-               preload="metadata"
-               poster="{{ asset('assets/farm-project/videos/mascot-video-poster.webp') }}"
-               aria-label="The Farm Project mascot showing a makhana packet">
-            <source src="{{ asset('assets/farm-project/videos/home-video-2.mp4') }}" type="video/mp4">
-            Your browser does not support video.
-        </video>
-        <span class="fp-hero-video-tag">MEET THE FARM PROJECT ✳</span>
-    </div>
-</div>
-
-            </div>
-            <div class="marquee-strip">
-                <div class="marquee-track" aria-label="The Farm Project products for your business">MAKHANA PRODUCTS
-                    <span>✳</span> BULK ENQUIRIES <span>✳</span> QUALITY CONVERSATIONS <span>✳</span> MAKHANA PRODUCTS
-                    <span>✳</span> BULK ENQUIRIES <span>✳</span> QUALITY CONVERSATIONS <span>✳</span></div>
-            </div>
-        </section>
-
-        <section class="benefit-section section-space" id="why-us">
-            <div class="container">
-                <div class="section-head flex-head">
-                    <div>
-                        <p class="section-kicker">WHY BUYERS ASK ABOUT THE FARM PROJECT</p>
-                        <h2>Makhana products.<br /><span>A clear business conversation.</span></h2>
-                    </div>
-                    <p class="section-side-note">From your first enquiry to supply questions, we keep the focus on your
-                        selected product and the details your business needs.</p>
-                </div>
-                <div class="benefit-grid">
-                    <article class="benefit-item"><span class="benefit-number">01 /</span><span aria-hidden="true" class="benefit-symbol">✷</span>
-                        <h3>Three products.<br />Clear focus.</h3>
-                        <p>Explore each product and enquire for the one that suits your business.</p>
-                    </article>
-                    <article class="benefit-item"><span class="benefit-number">02 /</span><span aria-hidden="true" class="benefit-symbol">◉</span>
-                        <h3>Know the details.</h3>
-                        <p>Ask about the product, quantities, packaging and pricing before planning an order.</p>
-                    </article>
-                    <article class="benefit-item"><span class="benefit-number">03 /</span><span aria-hidden="true" class="benefit-symbol">↗</span>
-                        <h3>Enquire with ease.</h3>
-                        <p>Share your city, business type and quantity requirement for your chosen product.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- THE FARM PROJECT | OUR PROCESS | 10-step visual flow -->
-        <section class="fp-flow section-space" id="our-process" aria-labelledby="fp-flow-title">
-            <div class="container">
-                {{-- <header class="fp-flow__header">
-      <p class="fp-flow__eyebrow">OUR PROCESS</p>
-      <h2 class="fp-flow__title" id="fp-flow-title">From Seed to Packed Makhana</h2>
-      <p class="fp-flow__intro">A carefully managed processing flow, from raw makhana seeds to graded and packed makhana.</p>
-    </header> --}}
-                <div class="section-head kr-products-heading">
-                    <div>
-                        <p class="section-kicker">OUR PROCESS</p>
-                        <h2 id="kr-products-heading">From Seed to <em>Packed Makhana</em></h2>
-                        <p>A carefully managed processing flow, from raw makhana seeds to graded and packed makhana.</p>
-                    </div>
-                    <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
-                </div>
-
-                <ol class="fp-flow__grid" aria-label="Makhana processing steps in order">
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 1">01</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/1st.png') }}" alt="Illustrative visual of makhana seed washing" width="680" height="528" loading="lazy" decoding="async">
-                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/01-washing.webp') }}" alt="Illustrative visual of makhana seed washing" width="680" height="528" loading="lazy" decoding="async"> --}}
-                        <h3 class="fp-flow__step-title">Makhana Seed Washing</h3>
-                        <p class="fp-flow__step-desc">Raw seeds are washed to remove dirt and unwanted material.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 2">02</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/2nd.png') }}" alt="Illustrative visual of drying" width="680" height="528" loading="lazy" decoding="async">
-                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/02-drying.webp') }}" alt="Illustrative visual of drying" width="680" height="528" loading="lazy" decoding="async"> --}}
-                        <h3 class="fp-flow__step-title">Drying</h3>
-                        <p class="fp-flow__step-desc">Washed seeds are dried and prepared for further processing.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 3">03</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/3rd.png') }}" alt="Illustrative visual of seed grading" width="680" height="528" loading="lazy" decoding="async">
-                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/03-seed-grading.webp') }}" alt="Illustrative visual of seed grading" width="680" height="528" loading="lazy" decoding="async"> --}}
-                        <h3 class="fp-flow__step-title">Seed Grading</h3>
-                        <p class="fp-flow__step-desc">Seeds are grouped by size for more consistent processing.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 4">04</span>
-                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/04-roasting.webp') }}" alt="Illustrative visual of roasting" width="680" height="528" loading="lazy" decoding="async"> --}}
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/4th.png') }}" alt="Illustrative visual of roasting" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Roasting</h3>
-                        <p class="fp-flow__step-desc">Graded seeds go through machine-based roasting.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 5">05</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/05-popping.webp') }}" alt="Illustrative visual of popping" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Popping</h3>
-                        <p class="fp-flow__step-desc">Roasted seeds are popped into makhana.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 6">06</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/06-hulling.webp') }}" alt="Illustrative visual of hulling" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Hulling</h3>
-                        <p class="fp-flow__step-desc">Remaining husk is separated and popped makhana is cleaned.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 7">07</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/07-makhana-grading.webp') }}" alt="Illustrative visual of makhana grading" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Makhana Grading</h3>
-                        <p class="fp-flow__step-desc">Popped makhana is graded into defined size categories.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 8">08</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/08-chipta-grading.webp') }}" alt="Illustrative visual of chipta grading" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Chipta Grading</h3>
-                        <p class="fp-flow__step-desc">Flat and unwanted pieces are separated from selected lots.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 9">09</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/09-colour-sorting.webp') }}" alt="Illustrative visual of colour sorting" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Colour Sorting</h3>
-                        <p class="fp-flow__step-desc">Visibly discoloured pieces are removed for a cleaner look.</p>
-                    </li>
-                    <li class="fp-flow__card">
-                        <span class="fp-flow__number" aria-label="Step 10">10</span>
-                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/10-packaging.webp') }}" alt="Illustrative visual of inspection &amp; packaging" width="680" height="528" loading="lazy" decoding="async">
-                        <h3 class="fp-flow__step-title">Inspection &amp; Packaging</h3>
-                        <p class="fp-flow__step-desc">Finished makhana is checked and prepared for packing.</p>
-                    </li>
-                </ol>
-                <p class="fp-flow__note">Process visuals are illustrative. The processing steps follow the Farm Project
-                    production brief.</p>
-            </div>
-        </section>
-
-        <!-- PRODUCT CARDS: Team.html-style in-place horizontal expansion -->
-        <!-- Existing 3-product horizontal expandable cards preserved -->
-        <section class="flavours-section kr-products-section section-space" id="plain-makhana" aria-labelledby="kr-products-heading">
-            <div class="container">
-                <div class="section-head kr-products-heading">
-                    <div>
-                        <p class="section-kicker">THREE RANGES. CLEAR GRADE OPTIONS.</p>
-                        <h2 id="kr-products-heading">Meet our <em>Products.</em></h2>
-                        <p>Explore Premium, Supreme and Standard makhana. Hover to see a pack's back view, then open a
-                            card to choose your grade.</p>
-                    </div>
-                    <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
-                </div>
-                <div class="kr-product-grid" id="kr-product-grid">
-                    <!-- PREMIUM / PURE GRADES: original flip + expand layout preserved -->
-                    <article class="kr-product-card" data-product-name="Premium">
-                        <div class="kr-product-preview">
-                            <span class="kr-product-index">01 / PURE GRADES</span>
-                            <button type="button" class="kr-product-preview-photo kr-product-flip" aria-label="Premium packaging reference: hover to see back; tap on touch screens to switch sides" aria-pressed="false" title="Hover to view back of the reference pack">
-                                <img class="front" src="{{ asset('assets/farm-project/images/green-bg-removed.png') }}" alt="Packaging reference photo, front view; exact Premium pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
-                                <img class="back" src="{{ asset('assets/farm-project/images/green-back-bg-removed.png') }}" alt="Packaging reference photo, back view; exact Premium pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
-                                <span class="kr-flip-tip" aria-hidden="true">HOVER TO SEE BACK ↗</span>
-                            </button>
-                            <button type="button" class="kr-product-trigger" aria-expanded="false" aria-controls="kr-product-details-1" aria-label="View Premium Pure Grades details">
-                                <span class="kr-product-heading-text">Premium</span>
-                                <span class="kr-product-preview-subtitle">Pure Grades · View available grades</span>
-                                <span class="kr-view-more">VIEW DETAILS <span aria-hidden="true">↗</span></span>
-                            </button>
-                        </div>
-                        <div class="kr-product-expanded" inert id="kr-product-details-1" aria-hidden="true">
-                            <div class="kr-product-expanded-inner">
-                                <button class="kr-close-product" type="button" aria-label="Close Premium details">×</button>
-                                <p class="section-kicker">PREMIUM / PURE GRADES</p>
-                                <h3>Premium</h3>
-                                <p class="kr-product-description">Our pure-grade makhana range is sorted by size, with
-                                    options from 3 Pure to 6 Pure for different business needs.</p>
-                                <fieldset class="fp-grade-picker" aria-label="Choose a Premium grade">
-                                    <legend>SELECT A GRADE</legend>
-                                    <div class="fp-grade-options">
-                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade=" 5 Plus" aria-pressed="false"> 5 Plus</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade="5 Plus handpicked" aria-pressed="false">5 Plus
-                                            handpicked</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade="6 plus" aria-pressed="false">6 Plus</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade="6 Plus handpicked " aria-pressed="false">6 Plus handpicked
-                                        </button>
-                                    </div>
-                                </fieldset>
-                                <div class="kr-product-info-list" aria-label="Premium product information">
-                                    <div><span>RANGE</span><strong>Pure Grades</strong></div>
-                                    <div><span>PACKAGING</span><strong>Pack shown is a reference. Confirm your exact
-                                            grade pack before ordering.</strong></div>
-                                </div>
-                                <a class="pill-button pill-black kr-enquire-product" href="#enquiry" data-product="Premium">Enquire Now for Premium <span aria-hidden="true">↗</span></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- SUPREME / HANDPICKED QUALITY: original flip + expand layout preserved -->
-                    <article class="kr-product-card" data-product-name="Supreme">
-                        <div class="kr-product-preview">
-                            <span class="kr-product-index">02 / HANDPICKED QUALITY</span>
-                            <button type="button" class="kr-product-preview-photo kr-product-flip" aria-label="Supreme packaging reference: hover to see back; tap on touch screens to switch sides" aria-pressed="false" title="Hover to view back of the reference pack">
-                                <img class="front" src="{{ asset('assets/farm-project/images/pink-bg-removed.png') }}" alt="Packaging reference photo, front view; exact Supreme pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
-                                <img class="back" src="{{ asset('assets/farm-project/images/pink-back-bg-removed.png') }}" alt="Packaging reference photo, back view; exact Supreme pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
-                                <span class="kr-flip-tip" aria-hidden="true">HOVER TO SEE BACK ↗</span>
-                            </button>
-                            <button type="button" class="kr-product-trigger" aria-expanded="false" aria-controls="kr-product-details-2" aria-label="View Supreme Handpicked Quality details">
-                                <span class="kr-product-heading-text">Supreme</span>
-                                <span class="kr-product-preview-subtitle">Handpicked Quality · View available
-                                    grades</span>
-                                <span class="kr-view-more">VIEW DETAILS <span aria-hidden="true">↗</span></span>
-                            </button>
-                        </div>
-                        <div class="kr-product-expanded" inert id="kr-product-details-2" aria-hidden="true">
-                            <div class="kr-product-expanded-inner">
-                                <button class="kr-close-product" type="button" aria-label="Close Supreme details">×</button>
-                                <p class="section-kicker">SUPREME / HANDPICKED QUALITY</p>
-                                <h3>Supreme</h3>
-                                <p class="kr-product-description">Our handpicked-quality range receives extra grading
-                                    and colour sorting for a cleaner, more uniform look.</p>
-                                <fieldset class="fp-grade-picker" aria-label="Choose a Supreme grade">
-                                    <legend>SELECT A GRADE</legend>
-                                    <div class="fp-grade-options">
-                                        <button type="button" class="fp-grade-chip" data-product="Supreme" data-grade="4 Plus" aria-pressed="false">4 Plus</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Supreme" data-grade="5 Plus handpicked" aria-pressed="false">5 Plus
-                                            handpicked</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Supreme" data-grade="6 Plus handpicked" aria-pressed="false">6 Plus
-                                            handpicked</button>
-                                    </div>
-                                </fieldset>
-                                <div class="kr-product-info-list" aria-label="Supreme product information">
-                                    <div><span>RANGE</span><strong>Handpicked Quality</strong></div>
-                                    <div><span>PACKAGING</span><strong>Pack shown is a reference. Confirm your exact
-                                            grade pack before ordering.</strong></div>
-                                </div>
-                                <a class="pill-button pill-black kr-enquire-product" href="#enquiry" data-product="Supreme">Enquire Now for Supreme <span aria-hidden="true">↗</span></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- STANDARD / MIXED SIZE (PLUS GRADES): original flip + expand layout preserved -->
-                    <article class="kr-product-card" data-product-name="Standard">
-                        <div class="kr-product-preview">
-                            <span class="kr-product-index">03 / MIXED SIZE (PLUS GRADES)</span>
-                            <button type="button" class="kr-product-preview-photo kr-product-flip" aria-label="Standard packaging reference: hover to see back; tap on touch screens to switch sides" aria-pressed="false" title="Hover to view back of the reference pack">
-                                <img class="front" src="{{ asset('assets/farm-project/images/red-bg-removed.png') }}" alt="Packaging reference photo, front view; exact Standard pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
-                                <img class="back" src="{{ asset('assets/farm-project/images/red-bk-bg-removed.png') }}" alt="Packaging reference photo, back view; exact Standard pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
-                                <span class="kr-flip-tip" aria-hidden="true">HOVER TO SEE BACK ↗</span>
-                            </button>
-                            <button type="button" class="kr-product-trigger" aria-expanded="false" aria-controls="kr-product-details-3" aria-label="View Standard Mixed Size (Plus Grades) details">
-                                <span class="kr-product-heading-text">Standard</span>
-                                <span class="kr-product-preview-subtitle">Mixed Size (Plus Grades) · View available
-                                    grades</span>
-                                <span class="kr-view-more">VIEW DETAILS <span aria-hidden="true">↗</span></span>
-                            </button>
-                        </div>
-                        <div class="kr-product-expanded" inert id="kr-product-details-3" aria-hidden="true">
-                            <div class="kr-product-expanded-inner">
-                                <button class="kr-close-product" type="button" aria-label="Close Standard details">×</button>
-                                <p class="section-kicker">STANDARD / MIXED SIZE (PLUS GRADES)</p>
-                                <h3>Standard</h3>
-                                <p class="kr-product-description">Our mixed-size range offers selected Plus-grade
-                                    blends built around 4, 5 and 6 size categories.</p>
-                                <fieldset class="fp-grade-picker" aria-label="Choose a Standard grade">
-                                    <legend>SELECT A GRADE</legend>
-                                    <div class="fp-grade-options">
-                                        <button type="button" class="fp-grade-chip" data-product="Standard" data-grade="3 Plus" aria-pressed="false">3 Plus</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Standard" data-grade="4 pure handpicked" aria-pressed="false">4 pure
-                                            handpicked</button>
-                                        <button type="button" class="fp-grade-chip" data-product="Standard" data-grade="4 pure" aria-pressed="false">4 pure</button>
-                                    </div>
-                                </fieldset>
-                                <div class="kr-product-info-list" aria-label="Standard product information">
-                                    <div><span>RANGE</span><strong>Mixed Size (Plus Grades)</strong></div>
-                                    <div><span>PACKAGING</span><strong>Pack shown is a reference. Confirm your exact
-                                            grade pack before ordering.</strong></div>
-                                </div>
-                                <a class="pill-button pill-black kr-enquire-product" href="#enquiry" data-product="Standard">Enquire Now for Standard <span aria-hidden="true">↗</span></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="kr-products-bottom-note"><span>Choose your product and grade.</span> <span>Then click
-                        <b>Enquire Now</b> to add them to your business enquiry.</span></div>
-            </div>
-        </section>
-
-
-        <section class="green-banner">
-            <div class="container green-banner-inner">
-                <div aria-hidden="true" class="green-callout-symbol">✳</div>
-                <div>
-                    <p>THREE PRODUCTS. A SIMPLE WAY TO CONNECT.</p>
-                    <h2>Let’s talk <em>products for your business.</em></h2>
-                </div><a href="#enquiry" class="pill-button pill-yellow">Enquire now <span aria-hidden="true">↗</span></a>
-            </div>
-        </section>
-
-        <section class="how-section section-space" id="how-it-works">
-            <div class="container">
-                <div class="section-head centered">
-                    <p class="section-kicker">HOW TO ENQUIRE</p>
-                    <h2>Three simple steps.<br /><span>One enquiry for your selected products.</span></h2>
-                </div>
-                {{-- <div class="how-grid">
-          <div class="how-card"><span>01</span><div aria-hidden="true">✎</div><h3>Share your business.</h3><p>Give your shop or company name, contact number and location.</p></div>
-          <div class="how-card"><span>02</span><div aria-hidden="true">✳</div><h3>Tell us the quantity.</h3><p>Choose your product and share how much you may need in kilograms.</p></div>
-          <div class="how-card"><span>03</span><div aria-hidden="true">↗</div><h3>Discuss the details.</h3><p>Ask about current availability, quality, price and supply terms.</p></div>
-        </div> --}}
-
-                <div class="how-grid">
-
-                    <div class="how-card">
-                        <span>01</span>
-
-                        <div aria-hidden="true">
-                            <i class="fa-solid fa-store"></i>
-                        </div>
-
-                        <h3>Share your business.</h3>
-
-                        <p>
-                            Give your shop or company name,
-                            contact number and location.
-                        </p>
-                    </div>
-
-                    <div class="how-card">
-                        <span>02</span>
-
-                        <div aria-hidden="true">
-                            <i class="fa-solid fa-weight-hanging"></i>
-                        </div>
-
-                        <h3>Tell us the quantity.</h3>
-
-                        <p>
-                            Choose your product and share how much
-                            you may need in kilograms.
-                        </p>
-                    </div>
-
-                    <div class="how-card">
-                        <span>03</span>
-
-                        <div aria-hidden="true">
-                            <i class="fa-solid fa-comments"></i>
-                        </div>
-
-                        <h3>Discuss the details.</h3>
-
-                        <p>
-                            Ask about current availability,
-                            quality, price and supply terms.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- OUR CLIENTS -->
-        {{-- <section class="fp-clients-section section-space" id="our-clients">
-    <div class="container">
-        
-  <div class="section-head kr-products-heading">
-      <div>
-        <p class="section-kicker">OUR CLIENTS</p>
-        <h2 id="kr-products-heading">Our Trusted <em>Partners.</em></h2>
-        <p>Building strong business relationships.</p>
-      </div>
-      <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
-    </div>
-        
-        <div class="fp-clients-grid">
-    @for ($i = 1; $i <= 6; $i++)
-        <div class="fp-client-card">
-            <img
-                src="/assets/farm-project/images/clients/client-{{ $i }}.png"
-        alt="Client {{ $i }} Logo"
-        loading="lazy"
-        >
-        </div>
-        @endfor
-        </div>
-        </div>
-
-        </section> --}}
-
-        <!-- OUR CLIENTS - SINGLE SET CAROUSEL -->
-
-        <section class="fp-clients-section section-space" id="our-clients">
-            <div class="container">
-
-                <div class="section-head kr-products-heading">
-                    <div>
-                        <p class="section-kicker">OUR CLIENTS</p>
-                        <h2>Our Trusted <em>Partners.</em></h2>
-                        <p>Building strong business relationships.</p>
-                    </div>
-                    <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
-                </div>
-
-                <div class="fp-single-carousel">
-                    <div class="fp-single-track">
-
-                        {{-- ONLY ONE SET OF 6 LOGOS --}}
-                        @for ($i = 1; $i <= 8; $i++) <div class="fp-single-card">
-                            <img src="{{ asset('assets/farm-project/images/clients/client-' . $i . '.png') }}" alt="Client {{ $i }} Logo" loading="lazy">
-                    </div>
-                    @endfor
-
-                </div>
-            </div>
-
-            </div>
-        </section>
-
-
-        <!-- OUR STRENGTHS -->
-        {{-- @php
-    // DEMO VALUES: Replace with actual company numbers.
-    $strengths = [
-        ['number' => '10+', 'label' => 'Years of Experience', 'icon' => '✳'],
-        ['number' => '100+', 'label' => 'Team Members', 'icon' => '◎'],
-        ['number' => '20+', 'label' => 'Business Partners', 'icon' => '↗'],
-        ['number' => '500+', 'label' => 'Production Capacity (kg/day)', 'icon' => '◈'],
-    ];
-@endphp
-
-<section class="fp-strengths-section section-space" id="our-strengths">
-    <div class="container">
-        
-          <div class="section-head kr-products-heading">
-      <div>
-        <p class="section-kicker">WHY THE FARM PROJECT</p>
-        <h2 id="kr-products-heading">Our <em>Strengths.</em></em></h2>
-        <p>The numbers behind our business.</p>
-      </div>
-      <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
-    </div>
-
-        <div class="fp-strengths-grid">
-            @foreach ($strengths as $item)
-                <div class="fp-strength-card">
-                    <span class="fp-strength-icon">
-                        {{ $item['icon'] }}
-        </span>
-
-        <h3>{{ $item['number'] }}</h3>
-
-        <p>{{ $item['label'] }}</p>
-        </div>
-        @endforeach
-        </div>
-
-
-        </div>
-        </section> --}}
-
-        {{-- THE FARM PROJECT | OUR STRENGTHS | NEW BENTO DESIGN --}}
-        <style>
-            /* THE FARM PROJECT | OUR STRENGTHS | Editorial Bento v3 */
+    <style>
+/* THE FARM PROJECT | OUR STRENGTHS | Editorial Bento v3 */
             .fp-strength-bento {
                 --fs-forest: #173a29;
                 --fs-forest-dark: #0f3021;
@@ -549,7 +40,7 @@
                 box-sizing: border-box
             }
 
-            .section-head h2 {
+            .fp-strength-bento .section-head h2 {
                 color: black;
             }
 
@@ -917,7 +408,749 @@
                 }
             }
 
-        </style>
+/* OUR STRENGTHS - FONT AWESOME */
+.fp-strength-bento .fsb-icon {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+}
+
+.fp-strength-bento .fsb-icon i {
+    font-size: 27px !important;
+    color: #285c37;
+    line-height: 1;
+}
+
+/* Left green panel icon */
+
+.fp-strength-bento .fsb-story-footer i {
+    color: #f5d35a;
+    font-size: 25px;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .fp-strength-bento .fsb-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .fp-strength-bento .fsb-icon i {
+        font-size: 22px !important;
+    }
+}
+
+
+/* =============================================
+   THE FARM PROJECT – HOW TO ENQUIRE
+   Single source of truth; all new styles are inline.
+   Retains original top-border steps and pastel icons.
+============================================= */
+#how-it-works {
+    background: #fff;
+}
+#how-it-works .section-head.centered {
+    margin-bottom: 34px;
+}
+#how-it-works .how-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 285px);
+    align-items: center;
+    gap: clamp(22px, 3vw, 38px);
+    width: 100%;
+}
+#how-it-works .how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 19px;
+    min-width: 0;
+}
+#how-it-works .how-card {
+    min-width: 0;
+    border-top: 2px solid var(--black, #181a14);
+    padding-top: 18px;
+}
+#how-it-works .how-card > div[aria-hidden="true"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 94px;
+    min-width: 94px;
+    min-height: 94px;
+    padding: 0;
+    margin: 22px auto 20px;
+    border-radius: 50%;
+    line-height: 1;
+    transform: none;
+}
+#how-it-works .how-card:nth-child(1) > div[aria-hidden="true"] { background: #e7efd8; }
+#how-it-works .how-card:nth-child(2) > div[aria-hidden="true"] { background: #fff0a5; }
+#how-it-works .how-card:nth-child(3) > div[aria-hidden="true"] { background: #ffded5; }
+#how-it-works .how-card > div[aria-hidden="true"] i {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 33px;
+    line-height: 1;
+    color: #243c20;
+    transform: none;
+}
+#how-it-works .how-card h3 {
+    font-size: clamp(19px, 1.9vw, 24px);
+    line-height: 1.2;
+    letter-spacing: -.035em;
+    margin: 0 0 10px;
+}
+#how-it-works .how-card p {
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+#how-it-works .how-mascot {
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: center;
+}
+#how-it-works .how-mascot img {
+    display: block;
+    width: min(100%, 230px);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#how-it-works .how-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line, #e7e7dc);
+}
+#how-it-works .how-cta p {
+    margin: 0;
+    font: 800 19px/1.3 var(--heading, Outfit, sans-serif);
+    letter-spacing: -.03em;
+}
+#how-it-works .how-cta .pill-button {
+    gap: 24px;
+    padding: 14px 22px;
+}
+@media (max-width: 1050px) {
+    #how-it-works .how-layout {
+        grid-template-columns: minmax(0, 1fr) 225px;
+        gap: 20px;
+    }
+    #how-it-works .how-grid { gap: 14px; }
+    #how-it-works .how-card h3 { font-size: 20px; }
+}
+@media (max-width: 900px) {
+    #how-it-works .how-layout {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+    #how-it-works .how-grid { gap: 22px; }
+    #how-it-works .how-mascot img { width: min(245px, 60vw); }
+}
+@media (max-width: 700px) {
+    #how-it-works .section-head.centered { margin-bottom: 28px; }
+    #how-it-works .how-layout { gap: 14px; }
+    #how-it-works .how-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    #how-it-works .how-card {
+        display: grid;
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 0 17px;
+        align-items: center;
+        padding-top: 14px;
+    }
+    #how-it-works .how-card > span { grid-column: 1 / -1; }
+    #how-it-works .how-card > div[aria-hidden="true"] {
+        grid-column: 1;
+        grid-row: 2 / 4;
+        width: 82px;
+        height: 82px;
+        min-width: 82px;
+        min-height: 82px;
+        margin: 12px auto;
+    }
+    #how-it-works .how-card > div[aria-hidden="true"] i { font-size: 29px; }
+    #how-it-works .how-card h3 {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end;
+        font-size: 21px;
+        margin-bottom: 7px;
+    }
+    #how-it-works .how-card p {
+        grid-column: 2;
+        grid-row: 3;
+        align-self: start;
+        font-size: 14px;
+    }
+    #how-it-works .how-mascot img { width: min(210px, 56vw); }
+    #how-it-works .how-cta {
+        margin-top: 16px;
+        padding-top: 20px;
+        gap: 14px;
+        text-align: center;
+    }
+    #how-it-works .how-cta p {
+        font-size: 18px;
+        width: 100%;
+    }
+    #how-it-works .how-cta .pill-button { padding: 13px 23px; }
+}
+@media (max-width: 370px) {
+    #how-it-works .how-card {
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 0 12px;
+    }
+    #how-it-works .how-card > div[aria-hidden="true"] {
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+        min-height: 72px;
+    }
+    #how-it-works .how-card h3 { font-size: 19px; }
+}
+
+    </style>
+</head>
+
+<body class="retailer-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="announce-bar">✳ THREE PRODUCTS. PLENTY OF POSSIBILITIES. ✳ LET’S TALK BUSINESS ENQUIRIES.</div>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <!-- <a class="brand-logo" href="{{ url('/') }}" aria-label="The Farm Project, back to Kaushal Agro"><img src="{{ asset('assets/farm-project/images/black-logo.png') }}" alt="KRUNKO" /></a> -->
+            <a class="brand-logo" href="{{ url('/') }}" aria-label="The Farm Project, back to Kaushal Agro">
+                <img src="{{ asset('assets/farm-project/images/black-logo.png') }}" alt="The Farm Project" width="1254" height="1254" />
+            </a>
+            <nav class="retail-nav" id="retail-nav" aria-label="Retailer page navigation">
+                <a href="#why-us">Why THE FARM PROJECT</a>
+                <a href="#our-process">Our Process</a>
+                <a href="#plain-makhana">Our Products</a>
+                <a href="#how-it-works">How it works</a>
+            </nav>
+            <div class="header-controls">
+                <a class="nav-cta" href="#enquiry">Send an enquiry ↗</a>
+                <button class="mobile-nav-toggle" type="button" aria-controls="retail-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO: existing markup and visual styles preserved -->
+        <section class="retail-hero" aria-labelledby="retailer-hero-heading">
+            <div class="container retail-hero-grid">
+                <div class="hero-message">
+                    <div class="mini-eyebrow"><span class="star-mark">✳</span> FOR RETAILERS, TRADERS &amp; BULK BUYERS
+                    </div>
+                    <h1 id="retailer-hero-heading"><span>MAKHANA</span><br /><em>PRODUCTS.</em><br />BIG POTENTIAL.</h1>
+                    <p>Explore THE FARM PROJECT products for your business. Hover to see the front and back of each
+                        pack, then open a card for details and enquire.</p>
+                    <div class="hero-actions">
+                        <a class="pill-button pill-black" href="#plain-makhana">Explore our products <span aria-hidden="true">↗</span></a>
+                        <a class="quiet-link" href="#our-process">See our process <span aria-hidden="true">↘</span></a>
+                    </div>
+                    <div class="hero-short-proof"><span><b>03</b> products</span><span class="dot-sep">✳</span><span>Product-specific enquiries</span></div>
+                </div>
+                {{-- <div class="hero-showcase plain-showcase" data-photo-container="hero">
+                    <div class="hero-image-shell">
+                        <div class="kr-hero-photo-fallback" aria-hidden="true">THE FARM PROJECT<span>✳</span></div>
+                        <img src="{{ asset('assets/farm-project/images/newimage.png') }}" class="real-photo real-photo--hero" data-real-photo="hero" alt="The Farm Project makhana product" width="900" height="900" fetchpriority="high" decoding="async" />
+                    </div>
+                </div> --}}
+                <div class="hero-showcase plain-showcase fp-hero-video-showcase">
+    <div class="hero-image-shell fp-hero-video-shell">
+        <video class="fp-hero-mascot-video" autoplay muted loop playsinline
+               preload="metadata"
+               poster="{{ asset('assets/farm-project/videos/mascot-video-poster.webp') }}"
+               aria-label="The Farm Project mascot showing a makhana packet">
+            <source src="{{ asset('assets/farm-project/videos/home-video-2.mp4') }}" type="video/mp4">
+            Your browser does not support video.
+        </video>
+        <span class="fp-hero-video-tag">MEET THE FARM PROJECT ✳</span>
+    </div>
+</div>
+
+            </div>
+            <div class="marquee-strip">
+                <div class="marquee-track" aria-label="The Farm Project products for your business">MAKHANA PRODUCTS
+                    <span>✳</span> BULK ENQUIRIES <span>✳</span> QUALITY CONVERSATIONS <span>✳</span> MAKHANA PRODUCTS
+                    <span>✳</span> BULK ENQUIRIES <span>✳</span> QUALITY CONVERSATIONS <span>✳</span></div>
+            </div>
+        </section>
+
+        <section class="benefit-section section-space" id="why-us">
+            <div class="container">
+                <div class="section-head flex-head">
+                    <div>
+                        <p class="section-kicker">WHY BUYERS ASK ABOUT THE FARM PROJECT</p>
+                        <h2>Makhana products.<br /><span>A clear business conversation.</span></h2>
+                    </div>
+                    <p class="section-side-note">From your first enquiry to supply questions, we keep the focus on your
+                        selected product and the details your business needs.</p>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit-item"><span class="benefit-number">01 /</span><span aria-hidden="true" class="benefit-symbol">✷</span>
+                        <h3>Three products.<br />Clear focus.</h3>
+                        <p>Explore each product and enquire for the one that suits your business.</p>
+                    </article>
+                    <article class="benefit-item"><span class="benefit-number">02 /</span><span aria-hidden="true" class="benefit-symbol">◉</span>
+                        <h3>Know the details.</h3>
+                        <p>Ask about the product, quantities, packaging and pricing before planning an order.</p>
+                    </article>
+                    <article class="benefit-item"><span class="benefit-number">03 /</span><span aria-hidden="true" class="benefit-symbol">↗</span>
+                        <h3>Enquire with ease.</h3>
+                        <p>Share your city, business type and quantity requirement for your chosen product.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE FARM PROJECT | OUR PROCESS | 10-step visual flow -->
+        <section class="fp-flow section-space" id="our-process" aria-labelledby="fp-flow-title">
+            <div class="container">
+                {{-- <header class="fp-flow__header">
+      <p class="fp-flow__eyebrow">OUR PROCESS</p>
+      <h2 class="fp-flow__title" id="fp-flow-title">From Seed to Packed Makhana</h2>
+      <p class="fp-flow__intro">A carefully managed processing flow, from raw makhana seeds to graded and packed makhana.</p>
+    </header> --}}
+                <div class="section-head kr-products-heading">
+                    <div>
+                        <p class="section-kicker">OUR PROCESS</p>
+                        <h2 id="fp-flow-title">From Seed to <em>Packed Makhana</em></h2>
+                        <p>A carefully managed processing flow, from raw makhana seeds to graded and packed makhana.</p>
+                    </div>
+                    <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+                </div>
+
+                <ol class="fp-flow__grid" aria-label="Makhana processing steps in order">
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 1">01</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/1st.png') }}" alt="Illustrative visual of makhana seed washing" width="680" height="528" loading="lazy" decoding="async">
+                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/01-washing.webp') }}" alt="Illustrative visual of makhana seed washing" width="680" height="528" loading="lazy" decoding="async"> --}}
+                        <h3 class="fp-flow__step-title">Makhana Seed Washing</h3>
+                        <p class="fp-flow__step-desc">Raw seeds are washed to remove dirt and unwanted material.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 2">02</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/2nd.png') }}" alt="Illustrative visual of drying" width="680" height="528" loading="lazy" decoding="async">
+                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/02-drying.webp') }}" alt="Illustrative visual of drying" width="680" height="528" loading="lazy" decoding="async"> --}}
+                        <h3 class="fp-flow__step-title">Drying</h3>
+                        <p class="fp-flow__step-desc">Washed seeds are dried and prepared for further processing.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 3">03</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/3rd.png') }}" alt="Illustrative visual of seed grading" width="680" height="528" loading="lazy" decoding="async">
+                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/03-seed-grading.webp') }}" alt="Illustrative visual of seed grading" width="680" height="528" loading="lazy" decoding="async"> --}}
+                        <h3 class="fp-flow__step-title">Seed Grading</h3>
+                        <p class="fp-flow__step-desc">Seeds are grouped by size for more consistent processing.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 4">04</span>
+                        {{-- <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/04-roasting.webp') }}" alt="Illustrative visual of roasting" width="680" height="528" loading="lazy" decoding="async"> --}}
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/4th.png') }}" alt="Illustrative visual of roasting" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Roasting</h3>
+                        <p class="fp-flow__step-desc">Graded seeds go through machine-based roasting.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 5">05</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/05-popping.webp') }}" alt="Illustrative visual of popping" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Popping</h3>
+                        <p class="fp-flow__step-desc">Roasted seeds are popped into makhana.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 6">06</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/06-hulling.webp') }}" alt="Illustrative visual of hulling" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Hulling</h3>
+                        <p class="fp-flow__step-desc">Remaining husk is separated and popped makhana is cleaned.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 7">07</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/07-makhana-grading.webp') }}" alt="Illustrative visual of makhana grading" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Makhana Grading</h3>
+                        <p class="fp-flow__step-desc">Popped makhana is graded into defined size categories.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 8">08</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/08-chipta-grading.webp') }}" alt="Illustrative visual of chipta grading" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Chipta Grading</h3>
+                        <p class="fp-flow__step-desc">Flat and unwanted pieces are separated from selected lots.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 9">09</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/09-colour-sorting.webp') }}" alt="Illustrative visual of colour sorting" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Colour Sorting</h3>
+                        <p class="fp-flow__step-desc">Visibly discoloured pieces are removed for a cleaner look.</p>
+                    </li>
+                    <li class="fp-flow__card">
+                        <span class="fp-flow__number" aria-label="Step 10">10</span>
+                        <img class="fp-flow__photo" src="{{ asset('assets/farm-project/images/process/10-packaging.webp') }}" alt="Illustrative visual of inspection &amp; packaging" width="680" height="528" loading="lazy" decoding="async">
+                        <h3 class="fp-flow__step-title">Inspection &amp; Packaging</h3>
+                        <p class="fp-flow__step-desc">Finished makhana is checked and prepared for packing.</p>
+                    </li>
+                </ol>
+                {{-- <p class="fp-flow__note">Process visuals are illustrative. The processing steps follow the Farm Project
+                    production brief.</p> --}}
+            </div>
+        </section>
+
+        <!-- PRODUCT CARDS: Team.html-style in-place horizontal expansion -->
+        <!-- Existing 3-product horizontal expandable cards preserved -->
+        <section class="flavours-section kr-products-section section-space" id="plain-makhana" aria-labelledby="kr-products-heading">
+            <div class="container">
+                <div class="section-head kr-products-heading">
+                    <div>
+                        <p class="section-kicker">THREE RANGES. CLEAR GRADE OPTIONS.</p>
+                        <h2 id="kr-products-heading">Meet our <em>Products.</em></h2>
+                        <p>Explore Premium, Supreme and Standard makhana. Hover to see a pack's back view, then open a
+                            card to choose your grade.</p>
+                    </div>
+                    <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+                </div>
+                <div class="kr-product-grid" id="kr-product-grid">
+                    <!-- PREMIUM / PURE GRADES: original flip + expand layout preserved -->
+                    <article class="kr-product-card" data-product-name="Premium">
+                        <div class="kr-product-preview">
+                            <span class="kr-product-index">01 / PURE GRADES</span>
+                            <button type="button" class="kr-product-preview-photo kr-product-flip" aria-label="Premium packaging reference: hover to see back; tap on touch screens to switch sides" aria-pressed="false" title="Hover to view back of the reference pack">
+                                <img class="front" src="{{ asset('assets/farm-project/images/green-bg-removed.png') }}" alt="Packaging reference photo, front view; exact Premium pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
+                                <img class="back" src="{{ asset('assets/farm-project/images/green-back-bg-removed.png') }}" alt="Packaging reference photo, back view; exact Premium pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
+                                <span class="kr-flip-tip" aria-hidden="true">HOVER TO SEE BACK ↗</span>
+                            </button>
+                            <button type="button" class="kr-product-trigger" aria-expanded="false" aria-controls="kr-product-details-1" aria-label="View Premium Pure Grades details">
+                                <span class="kr-product-heading-text">Premium</span>
+                                <span class="kr-product-preview-subtitle">Pure Grades · View available grades</span>
+                                <span class="kr-view-more">VIEW DETAILS <span aria-hidden="true">↗</span></span>
+                            </button>
+                        </div>
+                        <div class="kr-product-expanded" inert id="kr-product-details-1" aria-hidden="true">
+                            <div class="kr-product-expanded-inner">
+                                <button class="kr-close-product" type="button" aria-label="Close Premium details">×</button>
+                                <p class="section-kicker">PREMIUM / PURE GRADES</p>
+                                <h3>Premium</h3>
+                                <p class="kr-product-description">Our pure-grade makhana range is sorted by size, with
+                                    options from 3 Pure to 6 Pure for different business needs.</p>
+                                <fieldset class="fp-grade-picker" aria-label="Choose a Premium grade">
+                                    <legend>SELECT A GRADE</legend>
+                                    <div class="fp-grade-options">
+                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade=" 5 Plus" aria-pressed="false"> 5 Plus</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade="5 Plus handpicked" aria-pressed="false">5 Plus
+                                            handpicked</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade="6 plus" aria-pressed="false">6 Plus</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Premium" data-grade="6 Plus handpicked " aria-pressed="false">6 Plus handpicked
+                                        </button>
+                                    </div>
+                                </fieldset>
+                                <div class="kr-product-info-list" aria-label="Premium product information">
+                                    <div><span>RANGE</span><strong>Pure Grades</strong></div>
+                                    <div><span>PACKAGING</span><strong>Pack shown is a reference. Confirm your exact
+                                            grade pack before ordering.</strong></div>
+                                </div>
+                                <a class="pill-button pill-black kr-enquire-product" href="#enquiry" data-product="Premium">Enquire Now for Premium <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SUPREME / HANDPICKED QUALITY: original flip + expand layout preserved -->
+                    <article class="kr-product-card" data-product-name="Supreme">
+                        <div class="kr-product-preview">
+                            <span class="kr-product-index">02 / HANDPICKED QUALITY</span>
+                            <button type="button" class="kr-product-preview-photo kr-product-flip" aria-label="Supreme packaging reference: hover to see back; tap on touch screens to switch sides" aria-pressed="false" title="Hover to view back of the reference pack">
+                                <img class="front" src="{{ asset('assets/farm-project/images/pink-bg-removed.png') }}" alt="Packaging reference photo, front view; exact Supreme pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
+                                <img class="back" src="{{ asset('assets/farm-project/images/pink-back-bg-removed.png') }}" alt="Packaging reference photo, back view; exact Supreme pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
+                                <span class="kr-flip-tip" aria-hidden="true">HOVER TO SEE BACK ↗</span>
+                            </button>
+                            <button type="button" class="kr-product-trigger" aria-expanded="false" aria-controls="kr-product-details-2" aria-label="View Supreme Handpicked Quality details">
+                                <span class="kr-product-heading-text">Supreme</span>
+                                <span class="kr-product-preview-subtitle">Handpicked Quality · View available
+                                    grades</span>
+                                <span class="kr-view-more">VIEW DETAILS <span aria-hidden="true">↗</span></span>
+                            </button>
+                        </div>
+                        <div class="kr-product-expanded" inert id="kr-product-details-2" aria-hidden="true">
+                            <div class="kr-product-expanded-inner">
+                                <button class="kr-close-product" type="button" aria-label="Close Supreme details">×</button>
+                                <p class="section-kicker">SUPREME / HANDPICKED QUALITY</p>
+                                <h3>Supreme</h3>
+                                <p class="kr-product-description">Our handpicked-quality range receives extra grading
+                                    and colour sorting for a cleaner, more uniform look.</p>
+                                <fieldset class="fp-grade-picker" aria-label="Choose a Supreme grade">
+                                    <legend>SELECT A GRADE</legend>
+                                    <div class="fp-grade-options">
+                                        <button type="button" class="fp-grade-chip" data-product="Supreme" data-grade="4 Plus" aria-pressed="false">4 Plus</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Supreme" data-grade="5 Plus handpicked" aria-pressed="false">5 Plus
+                                            handpicked</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Supreme" data-grade="6 Plus handpicked" aria-pressed="false">6 Plus
+                                            handpicked</button>
+                                    </div>
+                                </fieldset>
+                                <div class="kr-product-info-list" aria-label="Supreme product information">
+                                    <div><span>RANGE</span><strong>Handpicked Quality</strong></div>
+                                    <div><span>PACKAGING</span><strong>Pack shown is a reference. Confirm your exact
+                                            grade pack before ordering.</strong></div>
+                                </div>
+                                <a class="pill-button pill-black kr-enquire-product" href="#enquiry" data-product="Supreme">Enquire Now for Supreme <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- STANDARD / MIXED SIZE (PLUS GRADES): original flip + expand layout preserved -->
+                    <article class="kr-product-card" data-product-name="Standard">
+                        <div class="kr-product-preview">
+                            <span class="kr-product-index">03 / MIXED SIZE (PLUS GRADES)</span>
+                            <button type="button" class="kr-product-preview-photo kr-product-flip" aria-label="Standard packaging reference: hover to see back; tap on touch screens to switch sides" aria-pressed="false" title="Hover to view back of the reference pack">
+                                <img class="front" src="{{ asset('assets/farm-project/images/red-bg-removed.png') }}" alt="Packaging reference photo, front view; exact Standard pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
+                                <img class="back" src="{{ asset('assets/farm-project/images/red-bk-bg-removed.png') }}" alt="Packaging reference photo, back view; exact Standard pack not yet verified" width="560" height="480" loading="lazy" decoding="async" />
+                                <span class="kr-flip-tip" aria-hidden="true">HOVER TO SEE BACK ↗</span>
+                            </button>
+                            <button type="button" class="kr-product-trigger" aria-expanded="false" aria-controls="kr-product-details-3" aria-label="View Standard Mixed Size (Plus Grades) details">
+                                <span class="kr-product-heading-text">Standard</span>
+                                <span class="kr-product-preview-subtitle">Mixed Size (Plus Grades) · View available
+                                    grades</span>
+                                <span class="kr-view-more">VIEW DETAILS <span aria-hidden="true">↗</span></span>
+                            </button>
+                        </div>
+                        <div class="kr-product-expanded" inert id="kr-product-details-3" aria-hidden="true">
+                            <div class="kr-product-expanded-inner">
+                                <button class="kr-close-product" type="button" aria-label="Close Standard details">×</button>
+                                <p class="section-kicker">STANDARD / MIXED SIZE (PLUS GRADES)</p>
+                                <h3>Standard</h3>
+                                <p class="kr-product-description">Our mixed-size range offers selected Plus-grade
+                                    blends built around 4, 5 and 6 size categories.</p>
+                                <fieldset class="fp-grade-picker" aria-label="Choose a Standard grade">
+                                    <legend>SELECT A GRADE</legend>
+                                    <div class="fp-grade-options">
+                                        <button type="button" class="fp-grade-chip" data-product="Standard" data-grade="3 Plus" aria-pressed="false">3 Plus</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Standard" data-grade="4 pure handpicked" aria-pressed="false">4 pure
+                                            handpicked</button>
+                                        <button type="button" class="fp-grade-chip" data-product="Standard" data-grade="4 pure" aria-pressed="false">4 pure</button>
+                                    </div>
+                                </fieldset>
+                                <div class="kr-product-info-list" aria-label="Standard product information">
+                                    <div><span>RANGE</span><strong>Mixed Size (Plus Grades)</strong></div>
+                                    <div><span>PACKAGING</span><strong>Pack shown is a reference. Confirm your exact
+                                            grade pack before ordering.</strong></div>
+                                </div>
+                                <a class="pill-button pill-black kr-enquire-product" href="#enquiry" data-product="Standard">Enquire Now for Standard <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="kr-products-bottom-note"><span>Choose your product and grade.</span> <span>Then click
+                        <b>Enquire Now</b> to add them to your business enquiry.</span></div>
+            </div>
+        </section>
+
+
+        <section class="green-banner">
+            <div class="container green-banner-inner">
+                <div aria-hidden="true" class="green-callout-symbol">✳</div>
+                <div>
+                    <p>THREE PRODUCTS. A SIMPLE WAY TO CONNECT.</p>
+                    <h2>Let’s talk <em>products for your business.</em></h2>
+                </div><a href="#enquiry" class="pill-button pill-yellow">Enquire now <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        
+
+
+<section class="how-section section-space" id="how-it-works">
+    <div class="container">
+
+        <div class="section-head centered">
+            <p class="section-kicker">HOW TO ENQUIRE</p>
+            <h2>
+                Three simple steps.<br>
+                <span>One enquiry for your selected products.</span>
+            </h2>
+        </div>
+
+        <div class="how-layout">
+
+            <div class="how-grid">
+
+                <div class="how-card">
+                    <span>01</span>
+                    <div aria-hidden="true">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3>Share your business.</h3>
+                    <p>
+                        Give your shop or company name,
+                        contact number and location.
+                    </p>
+                </div>
+
+                <div class="how-card">
+                    <span>02</span>
+                    <div aria-hidden="true">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                    </div>
+                    <h3>Tell us the quantity.</h3>
+                    <p>
+                        Choose your product and share how much
+                        you may need in kilograms.
+                    </p>
+                </div>
+
+                <div class="how-card">
+                    <span>03</span>
+                    <div aria-hidden="true">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3>Discuss the details.</h3>
+                    <p>
+                        Ask about current availability,
+                        quality, price and supply terms.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Original Farm Project Mascot -->
+            <div class="how-mascot">
+                <img
+                    src="{{ asset('assets/farm-project/images/how-to-enquire-mascot (2).png') }}"
+                    alt="The Farm Project mascot"
+                    width="307"
+                    height="511"
+                    loading="lazy"
+                    decoding="async"
+                >
+            </div>
+
+        </div>
+
+        <!-- Enquiry CTA -->
+        <div class="how-cta">
+            <p>Ready to discuss your makhana requirement?</p>
+
+            <a href="#enquiry" class="pill-button pill-yellow">
+                Enquire now
+                <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- OUR CLIENTS -->
+        {{-- <section class="fp-clients-section section-space" id="our-clients">
+    <div class="container">
+        
+  <div class="section-head kr-products-heading">
+      <div>
+        <p class="section-kicker">OUR CLIENTS</p>
+        <h2 id="kr-products-heading">Our Trusted <em>Partners.</em></h2>
+        <p>Building strong business relationships.</p>
+      </div>
+      <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+    </div>
+        
+        <div class="fp-clients-grid">
+    @for ($i = 1; $i <= 6; $i++)
+        <div class="fp-client-card">
+            <img
+                src="/assets/farm-project/images/clients/client-{{ $i }}.png"
+        alt="Client {{ $i }} Logo"
+        loading="lazy"
+        >
+        </div>
+        @endfor
+        </div>
+        </div>
+
+        </section> --}}
+
+        <!-- OUR CLIENTS - SINGLE SET CAROUSEL -->
+
+        <section class="fp-clients-section section-space" id="our-clients">
+            <div class="container">
+
+                <div class="section-head kr-products-heading">
+                    <div>
+                        <p class="section-kicker">OUR CLIENTS</p>
+                        <h2>Our Trusted <em>Partners.</em></h2>
+                        <p>Building strong business relationships.</p>
+                    </div>
+                    <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+                </div>
+
+                <div class="fp-single-carousel">
+                    <div class="fp-single-track">
+
+                        {{-- ONLY ONE SET OF 6 LOGOS --}}
+                        @for ($i = 1; $i <= 8; $i++) <div class="fp-single-card">
+                            <img src="{{ asset('assets/farm-project/images/clients/client-' . $i . '.png') }}" alt="Client {{ $i }} Logo" loading="lazy">
+                    </div>
+                    @endfor
+
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+
+        <!-- OUR STRENGTHS -->
+        {{-- @php
+    // DEMO VALUES: Replace with actual company numbers.
+    $strengths = [
+        ['number' => '10+', 'label' => 'Years of Experience', 'icon' => '✳'],
+        ['number' => '100+', 'label' => 'Team Members', 'icon' => '◎'],
+        ['number' => '20+', 'label' => 'Business Partners', 'icon' => '↗'],
+        ['number' => '500+', 'label' => 'Production Capacity (kg/day)', 'icon' => '◈'],
+    ];
+@endphp
+
+<section class="fp-strengths-section section-space" id="our-strengths">
+    <div class="container">
+        
+          <div class="section-head kr-products-heading">
+      <div>
+        <p class="section-kicker">WHY THE FARM PROJECT</p>
+        <h2 id="kr-products-heading">Our <em>Strengths.</em></em></h2>
+        <p>The numbers behind our business.</p>
+      </div>
+      <span aria-hidden="true" class="hand-drawn-arrow">↙</span>
+    </div>
+
+        <div class="fp-strengths-grid">
+            @foreach ($strengths as $item)
+                <div class="fp-strength-card">
+                    <span class="fp-strength-icon">
+                        {{ $item['icon'] }}
+        </span>
+
+        <h3>{{ $item['number'] }}</h3>
+
+        <p>{{ $item['label'] }}</p>
+        </div>
+        @endforeach
+        </div>
+
+
+        </div>
+        </section> --}}
+
+        {{-- THE FARM PROJECT | OUR STRENGTHS | NEW BENTO DESIGN --}}
+        
 
         <section class="fp-strength-bento" id="our-strengths" aria-labelledby="fsb-title">
             <div class="fsb-container">
@@ -928,7 +1161,7 @@
                 <div class="section-head kr-products-heading">
                     <div>
                         <p class="section-kicker">Our Strengths</p>
-                        <h2>Built on <em>Trust.</em></h2>
+                        <h2 id="fsb-title">Built on <em>Trust.</em></h2>
                         <p>Driven by experience, quality processing,
                             and strong business partnerships.</p>
                     </div>
@@ -1277,126 +1510,4 @@
                 by Kaushal Agro Industries</span><span>THREE PRODUCTS. ONE ENQUIRY. ✳</span></div>
     </footer>
 </body>
-<style>
-    /* =====================================
-   HOW IT WORKS - ICON STYLING FIX
-===================================== */
-
-    /* Icon circle */
-    .how-section .how-card>div[aria-hidden="true"] {
-        width: 100px;
-        height: 100px;
-        min-width: 100px;
-        min-height: 100px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin: 30px auto 28px;
-        padding: 0;
-
-        border-radius: 50%;
-        line-height: 1;
-    }
-
-    /* Font Awesome icons */
-    .how-section .how-card>div[aria-hidden="true"] i {
-        font-size: 34px !important;
-        color: #243c20;
-        line-height: 1 !important;
-        display: inline-block;
-        width: auto;
-        height: auto;
-        transform: none;
-    }
-
-    /* First icon background */
-    .how-section .how-card:nth-child(1)>div[aria-hidden="true"] {
-        background: #e7efd8;
-    }
-
-    /* Second icon background */
-    .how-section .how-card:nth-child(2)>div[aria-hidden="true"] {
-        background: #fff0a5;
-    }
-
-    /* Third icon background */
-    .how-section .how-card:nth-child(3)>div[aria-hidden="true"] {
-        background: #ffded5;
-    }
-
-    /* Heading spacing */
-    .how-section .how-card h3 {
-        margin: 0 0 12px;
-        font-size: clamp(21px, 2vw, 26px);
-        line-height: 1.3;
-        letter-spacing: -0.5px;
-    }
-
-    /* Description */
-    .how-section .how-card p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-        .how-section .how-card>div[aria-hidden="true"] {
-            width: 85px;
-            height: 85px;
-            min-width: 85px;
-            min-height: 85px;
-            margin: 25px auto;
-        }
-
-        .how-section .how-card>div[aria-hidden="true"] i {
-            font-size: 29px !important;
-        }
-
-        .how-section .how-card h3 {
-            font-size: 21px;
-        }
-
-        .how-section .how-card p {
-            font-size: 14px;
-        }
-    }
-/* OUR STRENGTHS - FONT AWESOME */
-
-.fp-strength-bento .fsb-icon {
-    width: 68px;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-}
-
-.fp-strength-bento .fsb-icon i {
-    font-size: 27px !important;
-    color: #285c37;
-    line-height: 1;
-}
-
-/* Left green panel icon */
-
-.fp-strength-bento .fsb-story-footer i {
-    color: #f5d35a;
-    font-size: 25px;
-    line-height: 1;
-}
-
-@media (max-width: 600px) {
-    .fp-strength-bento .fsb-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    .fp-strength-bento .fsb-icon i {
-        font-size: 22px !important;
-    }
-}
-</style>
-
 </html>

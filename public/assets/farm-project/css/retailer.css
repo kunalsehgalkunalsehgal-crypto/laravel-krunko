@@ -3877,3 +3877,83 @@ position: relative;
     object-fit: cover;
     display: block;
 }
+
+
+
+
+/* FARM PROJECT - HERO VIDEO MOBILE FIX */
+
+@media (max-width: 900px) {
+
+    .retail-hero .retail-hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding-bottom: 32px;
+    }
+
+    .retail-hero .fp-hero-video-showcase {
+        width: 100%;
+        max-width: 560px;
+        min-height: 0;
+        margin: 0 auto;
+        padding: 0;
+        transform: none;
+    }
+
+    .retail-hero .fp-hero-video-showcase
+    .fp-hero-video-shell {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9 !important;
+        padding: 6px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    /* Remove unnecessary blurred video background */
+    .retail-hero .fp-hero-video-shell::before {
+        display: none;
+    }
+
+    /* Keep the complete video visible */
+    .retail-hero .fp-hero-video-shell
+    .fp-hero-mascot-video {
+        position: absolute;
+        inset: 6px;
+        display: block;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        max-width: none;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 13px;
+        box-shadow: none;
+    }
+
+    .retail-hero .fp-hero-video-tag {
+        left: 12px;
+        bottom: 12px;
+        padding: 7px 10px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .retail-hero .fp-hero-video-showcase
+    .fp-hero-video-shell {
+        padding: 5px;
+        border-radius: 18px;
+    }
+
+    .retail-hero .fp-hero-video-shell
+    .fp-hero-mascot-video {
+        inset: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        border-radius: 12px;
+    }
+}
